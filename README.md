@@ -29,7 +29,7 @@ UUID="$(id -u)" GID="$(id -g)" docker-compose run helios
 To start the docker as daemon:
 ```
 UUID="$(id -u)" GID="$(id -g)" docker-compose up -d
-docker-compose exec -u phaethon bash
+docker-compose exec -u phaethon helios bash
 ```
 Do not forget to shutdown the docker after use with docker-compose down
 
