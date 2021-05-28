@@ -7,5 +7,11 @@ services:
     container_name: helios
     stdin_open: true # docker run -i
     #tty: true        # docker run -t
-    user: phaethon
-    shm_size: "32gb"  
+    #user: phaethon
+    shm_size: "32gb"
+    #volumes:
+    #    - /home/user/local_project:/home/phaethon/data
+    environment:
+        - LOCAL_UID=${UUID}
+        - LOCAL_GID=${GID}
+    entrypoint: /usr/local/bin/helios-entrypoint.sh

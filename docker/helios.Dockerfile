@@ -6,20 +6,14 @@ ENV LANG C.UTF-8
 
 RUN apt-get  -y update && apt-get install -y \
 	build-essential libarmadillo-dev git cmake \
-	libglm-dev libgdal-dev 
-
-#RUN echo 'deb http://deb.debian.org/debian buster-backports main' > /etc/apt/sources.list.d/backports.list
-
-RUN apt-get  -y update && apt-get install -y \
-libboost-dev libboost-system-dev libboost-thread-dev \
-libboost-regex-dev libboost-filesystem-dev libboost-iostreams-dev 
-#libboost1.71-all-dev/buster-backports 
-
-
-
-# create user
+	libglm-dev libgdal-dev sudo nano htop gosu \
+	libboost-dev libboost-system-dev libboost-thread-dev \
+    libboost-regex-dev libboost-filesystem-dev libboost-iostreams-dev 
+	
+# create user, ids are temporary
 ARG USER_ID=1000
-RUN useradd -m --no-log-init --system  --uid   ${USER_ID} phaethon -g sudo
+RUN useradd -m --no-log-init phaethon 
+RUN usermod -aG sudo phaethon
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 # clone Helios++
@@ -43,4 +37,7 @@ ENV PATH "$PATH:/home/phaethon/helios++/_build"
 
 WORKDIR /home/phaethon/
 
-ENTRYPOINT /bin/bash
+# Add helios-entrypoint, for user-managment (gosu e.t.c)
+COPY helios-entrypoint.sh /usr/local/bin/helios-entrypoint.sh
+RUN chmod +x /usr/local/bin/helios-entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/helios-entrypoint.sh"]
