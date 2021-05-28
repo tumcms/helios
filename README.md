@@ -14,7 +14,7 @@ It is developed and maintained by the [3DGeo Research Group](https://uni-heidelb
 Precompiled versions for Windows and Linux are available under [releases](https://github.com/3dgeo-heidelberg/helios/releases).
 
 ## :whale2: Docker
-A docker was made avaiable (no python support yet)
+A docker was made available (no python support yet)
 
 ```
 git clone https://github.com/tumcms/helios
@@ -23,8 +23,15 @@ cd helios /docker
 To start the docker run:
 
 ```
-docker-compose run helios
+UUID="$(id -u)" GID="$(id -g)" docker-compose run helios
 ```
+
+To start the docker as daemon:
+```
+UUID="$(id -u)" GID="$(id -g)" docker-compose up -d
+docker-compose exec -u phaethon bash
+```
+Do not forget to shutdown the docker after use with docker-compose down
 
 ## ℹ Documentation
 
