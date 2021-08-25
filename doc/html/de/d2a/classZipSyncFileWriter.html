@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('de/d2a/classZipSyncFileWriter.html','.
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="../../de/d2a/classZipSyncFileWriter.html" title="ZipSyncFileWriter implementation fro zipped text output format. ">ZipSyncFileWriter</a> implementation fro zipped text output format.  
+<p><a class="el" href="../../de/d2a/classZipSyncFileWriter.html" title="ZipSyncFileWriter implementation for zipped text output format. ">ZipSyncFileWriter</a> implementation for zipped text output format.  
  <a href="../../de/d2a/classZipSyncFileWriter.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../df/db7/ZipSyncFileWriter_8h_source.html">ZipSyncFileWriter.h</a>&gt;</code></p>
@@ -121,7 +121,7 @@ Collaboration diagram for ZipSyncFileWriter:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a840e405379b03438c7c588315b4065cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2a/classZipSyncFileWriter.html#a840e405379b03438c7c588315b4065cb">ZipSyncFileWriter</a> (const std::string &amp;<a class="el" href="../../d1/d0e/classSyncFileWriter.html#ac81265705f319162477eb0bf969e9334">path</a>, int compressionMode=boost::iostreams::zlib::best_compression)</td></tr>
-<tr class="memdesc:a840e405379b03438c7c588315b4065cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a <a class="el" href="../../de/d2a/classZipSyncFileWriter.html" title="ZipSyncFileWriter implementation fro zipped text output format. ">ZipSyncFileWriter</a>.  <a href="#a840e405379b03438c7c588315b4065cb">More...</a><br /></td></tr>
+<tr class="memdesc:a840e405379b03438c7c588315b4065cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a <a class="el" href="../../de/d2a/classZipSyncFileWriter.html" title="ZipSyncFileWriter implementation for zipped text output format. ">ZipSyncFileWriter</a>.  <a href="#a840e405379b03438c7c588315b4065cb">More...</a><br /></td></tr>
 <tr class="separator:a840e405379b03438c7c588315b4065cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fc121b2c43980121619088516718611"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2a/classZipSyncFileWriter.html#a2fc121b2c43980121619088516718611">_write</a> (<a class="el" href="../../db/d2e/classMeasurement.html">Measurement</a> const &amp;m, glm::dvec3 const &amp;shift) override</td></tr>
 <tr class="memdesc:a2fc121b2c43980121619088516718611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write measurement to compressed file.  <a href="#a2fc121b2c43980121619088516718611">More...</a><br /></td></tr>
@@ -176,6 +176,15 @@ std::unique_ptr&lt; boost::archive::binary_oarchive &gt;&#160;</td><td class="me
 std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d47/classSimpleSyncFileWriter.html#a698ad8740f4b8bdb7af111b8545ca6fc">ofs</a></td></tr>
 <tr class="memdesc:a698ad8740f4b8bdb7af111b8545ca6fc inherit pro_attribs_classSimpleSyncFileWriter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output file stream to be used by the simple synchronous file writer. <br /></td></tr>
 <tr class="separator:a698ad8740f4b8bdb7af111b8545ca6fc inherit pro_attribs_classSimpleSyncFileWriter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classSyncFileWriter"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classSyncFileWriter')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d1/d0e/classSyncFileWriter.html">SyncFileWriter</a></td></tr>
+<tr class="memitem:ac81265705f319162477eb0bf969e9334 inherit pro_attribs_classSyncFileWriter"><td class="memItemLeft" align="right" valign="top"><a id="ac81265705f319162477eb0bf969e9334"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0e/classSyncFileWriter.html#ac81265705f319162477eb0bf969e9334">path</a></td></tr>
+<tr class="memdesc:ac81265705f319162477eb0bf969e9334 inherit pro_attribs_classSyncFileWriter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to file to be written. <br /></td></tr>
+<tr class="separator:ac81265705f319162477eb0bf969e9334 inherit pro_attribs_classSyncFileWriter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79190ae81f92c33e8a5aa4c9956266cc inherit pro_attribs_classSyncFileWriter"><td class="memItemLeft" align="right" valign="top"><a id="a79190ae81f92c33e8a5aa4c9956266cc"></a>
+std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0e/classSyncFileWriter.html#a79190ae81f92c33e8a5aa4c9956266cc">mutex</a></td></tr>
+<tr class="memdesc:a79190ae81f92c33e8a5aa4c9956266cc inherit pro_attribs_classSyncFileWriter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex to synchronize concurrent write operations. <br /></td></tr>
+<tr class="separator:a79190ae81f92c33e8a5aa4c9956266cc inherit pro_attribs_classSyncFileWriter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -191,7 +200,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a923fae4cbe9786dfef88890c9ca74c47 inherit pro_methods_classSimpleSyncFileWriter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="../../de/d2a/classZipSyncFileWriter.html" title="ZipSyncFileWriter implementation fro zipped text output format. ">ZipSyncFileWriter</a> implementation fro zipped text output format. </p>
+<div class="textblock"><p><a class="el" href="../../de/d2a/classZipSyncFileWriter.html" title="ZipSyncFileWriter implementation for zipped text output format. ">ZipSyncFileWriter</a> implementation for zipped text output format. </p>
 <dl class="section author"><dt>Author</dt><dd>Alberto M. Esmoris Pena </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -229,7 +238,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Build a <a class="el" href="../../de/d2a/classZipSyncFileWriter.html" title="ZipSyncFileWriter implementation fro zipped text output format. ">ZipSyncFileWriter</a>. </p>
+<p>Build a <a class="el" href="../../de/d2a/classZipSyncFileWriter.html" title="ZipSyncFileWriter implementation for zipped text output format. ">ZipSyncFileWriter</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">compressionMode</td><td>Compression mode. Use boost::iostreams::zlib::best_speed to reduce execution time at most. Use boost::iostreams::zlib::best_compression to reduce size at most. </td></tr>

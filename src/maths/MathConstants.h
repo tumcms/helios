@@ -12,6 +12,13 @@ const double PI_HALF = M_PI/2.0;
 
 /**
  * \f[
+ *  \frac{\pi}{4}
+ * \f]
+ */
+const double PI_QUARTER = M_PI/4.0;
+
+/**
+ * \f[
  *  \frac{3{\pi}}{2}
  * \f]
  */
@@ -53,3 +60,11 @@ const double ALMOST_MINUS_1 = -0.9999999999;
  * @brief Constant representing a very close from below to 1 number
  */
 const double ALMOST_PLUS_1 = 0.9999999999;
+
+/**
+ * \f[
+ *  \sqrt{2}
+ * \f]
+ */
+
+const double SQRT2 = 1.4142135623730951;

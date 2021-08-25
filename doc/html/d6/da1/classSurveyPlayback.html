@@ -124,9 +124,9 @@ Collaboration diagram for SurveyPlayback:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4589f2baa7727649ff124b9942255111"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da1/classSurveyPlayback.html#a4589f2baa7727649ff124b9942255111">SurveyPlayback</a> (std::shared_ptr&lt; <a class="el" href="../../d5/db6/classSurvey.html">Survey</a> &gt; survey, const std::string <a class="el" href="../../d6/da1/classSurveyPlayback.html#a8ecaf6182eba1df49d53d30f56bf4260">outputPath</a>, size_t numThreads, bool <a class="el" href="../../d6/da1/classSurveyPlayback.html#a1b2a23d061084f30108d2115cbfe313e">lasOutput</a>, bool <a class="el" href="../../d6/da1/classSurveyPlayback.html#afd7c61d871adcce9096283538e8e8677">zipOutput</a>, bool <a class="el" href="../../d1/d7b/classSimulation.html#a920742a7e2a07fef6f4c953423886495">exportToFile</a>=true)</td></tr>
-<tr class="memdesc:a4589f2baa7727649ff124b9942255111"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d5/db6/classSurvey.html" title="Class representing a Helios++ survey. ">Survey</a> playback constructor.  <a href="#a4589f2baa7727649ff124b9942255111">More...</a><br /></td></tr>
-<tr class="separator:a4589f2baa7727649ff124b9942255111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada60f96735928b11a4c549e737c237a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da1/classSurveyPlayback.html#ada60f96735928b11a4c549e737c237a5">SurveyPlayback</a> (std::shared_ptr&lt; <a class="el" href="../../d5/db6/classSurvey.html">Survey</a> &gt; survey, const std::string <a class="el" href="../../d6/da1/classSurveyPlayback.html#a8ecaf6182eba1df49d53d30f56bf4260">outputPath</a>, size_t numThreads, bool <a class="el" href="../../d6/da1/classSurveyPlayback.html#a1b2a23d061084f30108d2115cbfe313e">lasOutput</a>, bool <a class="el" href="../../d6/da1/classSurveyPlayback.html#a8923c803b7e38d0d99272a03aa886888">las10</a>, bool <a class="el" href="../../d6/da1/classSurveyPlayback.html#afd7c61d871adcce9096283538e8e8677">zipOutput</a>, bool <a class="el" href="../../d1/d7b/classSimulation.html#a920742a7e2a07fef6f4c953423886495">exportToFile</a>=true)</td></tr>
+<tr class="memdesc:ada60f96735928b11a4c549e737c237a5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d5/db6/classSurvey.html" title="Class representing a Helios++ survey. ">Survey</a> playback constructor.  <a href="#ada60f96735928b11a4c549e737c237a5">More...</a><br /></td></tr>
+<tr class="separator:ada60f96735928b11a4c549e737c237a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36f9638ef520b4d7a47a89957b6fed27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da1/classSurveyPlayback.html#a36f9638ef520b4d7a47a89957b6fed27">estimateTime</a> (int legCurrentProgress, bool onGround, double legElapsedLength)</td></tr>
 <tr class="memdesc:a36f9638ef520b4d7a47a89957b6fed27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time estimation for the entire simulation and current leg. NOTICE this function is called from trackProgress.  <a href="#a36f9638ef520b4d7a47a89957b6fed27">More...</a><br /></td></tr>
 <tr class="separator:a36f9638ef520b4d7a47a89957b6fed27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,6 +217,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7b/classSimulation.html#a171b98c3d0a3a28ae151f7b716537717">shutdown</a> ()</td></tr>
 <tr class="memdesc:a171b98c3d0a3a28ae151f7b716537717 inherit pub_methods_classSimulation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle simulation shutdown. <br /></td></tr>
 <tr class="separator:a171b98c3d0a3a28ae151f7b716537717 inherit pub_methods_classSimulation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb4772514f61bdcd00f977106e8833ce inherit pub_methods_classSimulation"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7b/classSimulation.html#afb4772514f61bdcd00f977106e8833ce">calcCurrentGpsTime</a> ()</td></tr>
+<tr class="memdesc:afb4772514f61bdcd00f977106e8833ce inherit pub_methods_classSimulation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the current GPS time (milliseconds)  <a href="../../d1/d7b/classSimulation.html#afb4772514f61bdcd00f977106e8833ce">More...</a><br /></td></tr>
+<tr class="separator:afb4772514f61bdcd00f977106e8833ce inherit pub_methods_classSimulation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ba648397480bb134a0bfbbda499914d inherit pub_methods_classSimulation"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7b/classSimulation.html#a0ba648397480bb134a0bfbbda499914d">setSimSpeedFactor</a> (double factor)</td></tr>
 <tr class="memdesc:a0ba648397480bb134a0bfbbda499914d inherit pub_methods_classSimulation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the simulation speed factor.  <a href="../../d1/d7b/classSimulation.html#a0ba648397480bb134a0bfbbda499914d">More...</a><br /></td></tr>
 <tr class="separator:a0ba648397480bb134a0bfbbda499914d inherit pub_methods_classSimulation"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -252,6 +255,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da1/classSurveyPlayback.html#a1b2a23d061084f30108d2115cbfe313e">lasOutput</a> = false</td></tr>
 <tr class="memdesc:a1b2a23d061084f30108d2115cbfe313e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to specify if LAS format must be used for the output (true) or not (false) <br /></td></tr>
 <tr class="separator:a1b2a23d061084f30108d2115cbfe313e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8923c803b7e38d0d99272a03aa886888"><td class="memItemLeft" align="right" valign="top"><a id="a8923c803b7e38d0d99272a03aa886888"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da1/classSurveyPlayback.html#a8923c803b7e38d0d99272a03aa886888">las10</a> = false</td></tr>
+<tr class="memdesc:a8923c803b7e38d0d99272a03aa886888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to specify if LAS output must be LAS v1.0. <br /></td></tr>
+<tr class="separator:a8923c803b7e38d0d99272a03aa886888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd7c61d871adcce9096283538e8e8677"><td class="memItemLeft" align="right" valign="top"><a id="afd7c61d871adcce9096283538e8e8677"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da1/classSurveyPlayback.html#afd7c61d871adcce9096283538e8e8677">zipOutput</a> = false</td></tr>
 <tr class="memdesc:afd7c61d871adcce9096283538e8e8677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to specify if output must be zipped (true) or not (false) <br /></td></tr>
@@ -377,6 +384,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7b/classSimulation.html#abb93b11da9a5fe48f3b4d42ada8ba5d1">timeStart_ms</a> = 0</td></tr>
 <tr class="memdesc:abb93b11da9a5fe48f3b4d42ada8ba5d1 inherit pro_attribs_classSimulation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time corresponding to simulation start (milliseconds) <br /></td></tr>
 <tr class="separator:abb93b11da9a5fe48f3b4d42ada8ba5d1 inherit pro_attribs_classSimulation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1afafff95801808cecac3eda24bcefbc inherit pro_attribs_classSimulation"><td class="memItemLeft" align="right" valign="top"><a id="a1afafff95801808cecac3eda24bcefbc"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7b/classSimulation.html#a1afafff95801808cecac3eda24bcefbc">currentGpsTime_ms</a> = 0</td></tr>
+<tr class="memdesc:a1afafff95801808cecac3eda24bcefbc inherit pro_attribs_classSimulation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time corresponding to simulation start (currentGpsTime) <br /></td></tr>
+<tr class="separator:a1afafff95801808cecac3eda24bcefbc inherit pro_attribs_classSimulation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_attribs_classSimulation"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classSimulation')"><img src="../../closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="../../d1/d7b/classSimulation.html">Simulation</a></td></tr>
 <tr class="memitem:a2946fe05bca500ed8859d460475b2b5f inherit pro_static_attribs_classSimulation"><td class="memItemLeft" align="right" valign="top"><a id="a2946fe05bca500ed8859d460475b2b5f"></a>
 static const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7b/classSimulation.html#a2946fe05bca500ed8859d460475b2b5f">NANOSECONDS_PER_SECOND</a> = 1000000000</td></tr>
@@ -387,8 +398,8 @@ static const long&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <div class="textblock"><p><a class="el" href="../../d5/db6/classSurvey.html" title="Class representing a Helios++ survey. ">Survey</a> playback class, used to extend simulation functionalities so it can be controlled. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d1/d7b/classSimulation.html" title="Class representing a simulation. ">Simulation</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4589f2baa7727649ff124b9942255111"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4589f2baa7727649ff124b9942255111">&#9670;&nbsp;</a></span>SurveyPlayback()</h2>
+<a id="ada60f96735928b11a4c549e737c237a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada60f96735928b11a4c549e737c237a5">&#9670;&nbsp;</a></span>SurveyPlayback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -421,6 +432,12 @@ static const long&#160;</td><td class="memItemRight" valign="bottom"><a class="e
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>las10</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>zipOutput</em>, </td>
         </tr>
         <tr>
@@ -444,12 +461,15 @@ static const long&#160;</td><td class="memItemRight" valign="bottom"><a class="e
     <tr><td class="paramname">outputPath</td><td>Root output path </td></tr>
     <tr><td class="paramname">numThreads</td><td>Number of threads to be used </td></tr>
     <tr><td class="paramname">lasOutput</td><td>Flag to specify LAS format for the output (true) or not (false) </td></tr>
+    <tr><td class="paramname">las10</td><td>Flag to specify if LAS output must be LAS v1.0 (true) or not (false). </td></tr>
     <tr><td class="paramname">zipOutput</td><td>Flag to specify if output must be zipped (true) or not (false) </td></tr>
     <tr><td class="paramname">exportToFile</td><td>Flag to specify if output must be written to a file (true) or not (false) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d6/da1/classSurveyPlayback.html#a1b2a23d061084f30108d2115cbfe313e" title="Flag to specify if LAS format must be used for the output (true) or not (false) ">SurveyPlayback::lasOutput</a> </dd>
+<dd>
+<a class="el" href="../../d6/da1/classSurveyPlayback.html#a8923c803b7e38d0d99272a03aa886888" title="Flag to specify if LAS output must be LAS v1.0. ">SurveyPlayback::las10</a> </dd>
 <dd>
 <a class="el" href="../../d6/da1/classSurveyPlayback.html#afd7c61d871adcce9096283538e8e8677" title="Flag to specify if output must be zipped (true) or not (false) ">SurveyPlayback::zipOutput</a> </dd>
 <dd>

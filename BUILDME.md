@@ -4,8 +4,10 @@
 1. [Legacy version](#legacy-version)
 1. [Install](#install)
     1. [Dependencies](#dependencies)
-    1. [Install on Linux](#install-on-linux)
-    1. [Install on Windows](#install-on-windows)
+    2. [Install on Linux](#install-on-linux)
+    3. [Install on Linux with PyHelios Support](#install-on-linux-with-pyhelios-support) 
+    4. [Install on Linux with Visual Debug](#install-on-linux-with-visual-debug)
+    5. [Install on Windows](#install-on-windows)
 1. [Usage](#usage)
 1. [License](#license)
 
@@ -57,15 +59,6 @@ Use cmake to configure and generate build files
 ```
 cmake .
 ```
-If you want to compile enabling python bindings, use this cmake command instead
-```
-cmake -DPYTHON_BINDING=1 .
-```
-Also, if you need to specify a concrete python version or even provide the path to a concrete python installation,
-you can use following flags with cmake (you can change version or path to match yours)
-```
-cmake -DPYTHON_BINDING=1 -DPYTHON_VERSION=38 -DPYTHON_PATH=/home/user/mypython .
-```
 To compile providing a concrete implementation of LAPACK library, use this cmake command
 ```
 cmake -DLAPACK_LIB=/home/user/mylapack.so
@@ -81,11 +74,84 @@ For instance, to compil using 6 threads:
 make -j 6
 ```
 
+### Install on Linux with PyHelios support
+
+In order to be able to compile the project enabling Python Bindings support,
+all the libraries must be built from scratch:
+
+### Helios Dependencies
+
+- ```apt install cmake make gcc g++ libarmadillo-dev libglm-dev python3 python3-pip libpython3.8-dev unzip```
+
+#### LASTools
+
+- ```cd helios/lib```
+- ```wget https://lastools.github.io/download/LAStools.zip && unzip LAStools.zip```
+- ```cd LAStools && cmake .  && make```
+
+#### Boost
+IMPORTANT: Remove completely any previous existing Boost installation before continue
+
+- ```wget https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.gz```
+- ```tar -xzvf boost_1_76_0.tar.gz```
+- ```cd boost_1_76_0```
+- ```./bootstrap.sh --with-python=python3.8```
+- ```./b2 cxxflags=-fPIC```
+- ```./b2 install```
+
+#### Proj
+- ```apt install pkg-config libsqlite3-dev sqlite3 libtiff5-dev libcurl4-openssl-dev```
+- ```wget http://download.osgeo.org/proj/proj-8.0.0.tar.gz```
+- ```tar -xzvf proj-8.0.0.tar.gz```
+- ```cd proj-8.0.0 && ./configure && make && make install```
+
+#### GDAL
+- ```wget https://github.com/OSGeo/gdal/releases/download/v3.2.1/gdal-3.3.0.tar.gz --no-check-certificate ```
+- ```tar -xzvf gdal-3.3.0.tar.gz```
+- ```cd gdal-3.3.0 && ./configure && make && make install```
+
+#### PyHelios Dependencies
+
+- ```pip3 install open3d```
+
+Back to the helios root directory, compile:
+
+```cmake -DCMAKE_BUILD_TYPE=Release -DPYTHON_BINDING=1 -DPYTHON_VERSION=38 .```
+
+In order to execute PyHelios scripts, libhelios.so path must be added to PYTHONPATH (default location: helios root directory):
+
+```export PYTHONPATH=$PYTHONPATH:/path/to/helios```
+
+Finally, to execute the demo scene using PyHelios:
+
+```python3 helios/pyhelios_demo/helios.py pyhelios_demo/custom_als_toyblocks.xml```
+
+### Install on Linux with Visual Debug
+Linux users might compile Helios++ with a visual debug module used mainly for
+development and debugging purposes. 
+
+First step is building Helios libraries through development scripts in
+*helios/scripts/build/* using script:
+```
+./build_all_libs.sh -c -v -w 6
+```
+The `-c` flag is used to include PCL (Point Cloud Library), the `-v` flag
+will build VTK and use it later to build PCL and the `-w 6` argument requests
+compilation acceleration using 6 threads. Of course, `-w n` is supported so
+feel free to use preferred number of threads. There is one more flag that
+can be used to specify the python version for Boost and PyHelios `-p 3.7`,
+just in case.
+
+Finally, when compiling Helios++ remember to call CMake with flag
+`-DPCL_BINDING=1` so PCL and VTK are considered when building Helios. Notice
+using PCL requires the C++ standard upgrades from C++11 to C++14, which differs
+from base Helios building which only requires C++11.
+
 ### Install on Windows
 
 To obtain the source just clone it from the repository
 ```
-git clone <URL to the public repository>
+git clone https://github.com/3dgeo-heidelberg/helios.git
 ```
 
 #### Solving dependencies
@@ -104,6 +170,48 @@ bootstrap.bat
 b2.exe -j6 -sNO_ZLIB=0 -sZLIB_INCLUDE="zlib-1.2.11" -sZLIB_SOURCE="zlib-1.2.11" address-model=64 link=static
 ```
 **REMEMBER** to change the zlib version in above command if you download a different one
+
+##### Boost C++ with python bindings
+Boost needs to be compiled with support for python if the `HELIOS++` `pyhelios` bindings
+should be compiled. The version of boost-python needs to be adapted to the targeted python version.
+To configure different versions, edit or create a file called `user-config.jam` in the *user home directory*, e.g. `C:\users\yourname\`.
+
+Add the following lines to the file (adapting the paths to your python installations, the example is using [miniconda](https://docs.conda.io/en/latest/miniconda.html)):
+```
+using python 
+   : 3.6
+   : D:\\Miniconda3\\envs\\py36\\python.exe
+   : D:\\Miniconda3\\envs\\py36\\include #directory that contains pyconfig.h
+   : D:\\Miniconda3\\envs\\py36\\libs    #directory that contains python36.lib
+   ;
+using python 
+   : 3.7
+   : D:\\Miniconda3\\envs\\py37\\python.exe
+   : D:\\Miniconda3\\envs\\py37\\include #directory that contains pyconfig.h
+   : D:\\Miniconda3\\envs\\py37\\libs    #directory that contains python37.lib
+   ;
+using python 
+   : 3.8
+   : D:\\Miniconda3\\envs\\py38\\python.exe
+   : D:\\Miniconda3\\envs\\py38\\include #directory that contains pyconfig.h
+   : D:\\Miniconda3\\envs\\py38\\libs    #directory that contains python38.lib
+   ;
+using python 
+   : 3.9
+   : D:\\Miniconda3\\envs\\py39\\python.exe
+   : D:\\Miniconda3\\envs\\py39\\include #directory that contains pyconfig.h
+   : D:\\Miniconda3\\envs\\py39\\libs    #directory that contains python39.lib
+   ;
+```
+
+Then build **Boost C++** using the following command:
+
+```
+bootstrap.bat
+b2.exe -j6 -sNO_ZLIB=0 -sZLIB_INCLUDE="zlib-1.2.11" -sZLIB_SOURCE="zlib-1.2.11" address-model=64 link=static -python=3.6,3.7,3.8,3.9
+```
+
+You can later decide which version to build `pyhelios` for, see [Compiling source](#compiling-source).
 
 ##### OpenGLM Mathematics
 Simply download the [OpenGLM mathematics library](https://github.com/g-truc/glm/tags)
@@ -145,7 +253,7 @@ In this case we are going to use [Scilab 6.1.0 x64](https://www.scilab.org/downl
 Now it is necessary to download [Armadillo](http://arma.sourceforge.net/download.html)
 and decompress it inside *lib/armadillo*.
 
-Using [Armadillo 9.900.1](http://sourceforge.net/projects/arma/files/armadillo-9.900.1.tar.xz)
+Using [Armadillo 10.6.2](http://sourceforge.net/projects/arma/files/armadillo-10.6.2.tar.xz)
 or newer is recommended.
 
 Once Armadillo has been decompressed it is time to use CMake to configurate and
@@ -161,6 +269,19 @@ For instance: *C:\Program Files\scilab-6.1.0\bin*
 2) At `Linker -> Input` it is necessary to add path to the folder where scilab
 lib files are contained.
 For instance: *C:\Program Files\scilab-6.1.0\bin*
+
+<p>
+<b><span style="color:red;">/!\</span>
+WARNING
+<span style="color:red">/!\</span></b>
+Visual studio linking errors might occur. If it is your case, try explicitly
+binding both LAPACK and BLAS at the IDE itself:
+</p>
+
+```
+scilab-6.1.0/bin/lapack.lib
+scilab-6.1.0/bin/blasplus.lib
+```
 
 #### Compiling source
 

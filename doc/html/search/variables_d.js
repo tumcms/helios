@@ -9,5 +9,6 @@ var searchData=
   ['originwaypoint',['originWaypoint',['../df/d1e/classPlatform.html#ab09ad870a68d02b441b25e60439f72c6',1,'Platform']]],
   ['outputfilelineformatstring',['outputFileLineFormatString',['../d8/d6b/classAbstractDetector.html#aa0b8b3f4ce8865d0318553261fb2483d',1,'AbstractDetector']]],
   ['outputfilepath',['outputFilePath',['../d8/d6b/classAbstractDetector.html#a3cd34c888826fd57f7cf15ffd39a7861',1,'AbstractDetector']]],
-  ['outputpath',['outputPath',['../d6/da1/classSurveyPlayback.html#a8ecaf6182eba1df49d53d30f56bf4260',1,'SurveyPlayback']]]
+  ['outputpath',['outputPath',['../d6/da1/classSurveyPlayback.html#a8ecaf6182eba1df49d53d30f56bf4260',1,'SurveyPlayback']]],
+  ['overhead_5fstructure',['OVERHEAD_STRUCTURE',['../df/d64/classLasSpecification.html#a45dbb6130c46b00f045abc180daeeb3e',1,'LasSpecification']]]
 ];

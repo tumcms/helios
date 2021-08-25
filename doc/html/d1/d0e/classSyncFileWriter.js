@@ -1,5 +1,6 @@
 var classSyncFileWriter =
 [
+    [ "SyncFileWriter", "d1/d0e/classSyncFileWriter.html#a8f18875dce3353e6715b506d02cfa428", null ],
     [ "SyncFileWriter", "d1/d0e/classSyncFileWriter.html#a82bd84aefdd9db1187b8214c39fd1e18", null ],
     [ "~SyncFileWriter", "d1/d0e/classSyncFileWriter.html#a8244b9aed9038df9aae15bf7d8d7573c", null ],
     [ "_write", "d1/d0e/classSyncFileWriter.html#aba119a10da12f686f44b2f3194e73c92", null ],

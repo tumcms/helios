@@ -14,9 +14,11 @@
 #include <Material.h>
 #include <gdal_priv.h>
 
-using namespace boost::python;
-
 BOOST_PYTHON_MODULE(pyhelios){
+    // Namespace must be used locally to prevent conflicts
+    using namespace boost::python;
+    using namespace pyhelios;
+
     // Configure logging system
     logging::makeQuiet();
     logging::configure({
@@ -66,6 +68,7 @@ BOOST_PYTHON_MODULE(pyhelios){
             std::string,
             std::string,
             size_t,
+            bool,
             bool,
             bool
         >())
@@ -153,6 +156,11 @@ BOOST_PYTHON_MODULE(pyhelios){
             "lasOutput",
             &PyHeliosSimulation::getLasOutput,
             &PyHeliosSimulation::setLasOutput
+        )
+        .add_property(
+            "las10",
+            &PyHeliosSimulation::getLas10,
+            &PyHeliosSimulation::setLas10
         )
         .add_property(
             "zipOutput",

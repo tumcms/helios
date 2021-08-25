@@ -16,6 +16,7 @@ var searchData=
   ['binsize_5fns',['binSize_ns',['../d4/dfb/classFWFSettings.html#a07274de10710a51846ba5a07f8d9a220',1,'FWFSettings']]],
   ['blank_5fcharacters',['BLANK_CHARACTERS',['../d9/ddf/classVoxelFileParser.html#a08f8426398c5b71b60420ad49ee8c963',1,'VoxelFileParser']]],
   ['bounds',['bounds',['../d2/d1a/classAABB.html#af41b9802252d42310200694c104d6499',1,'AABB']]],
+  ['bridge_5fdeck',['BRIDGE_DECK',['../df/d64/classLasSpecification.html#aa8dffe5bcb79ae256a49bb1c1f88b08b',1,'LasSpecification']]],
   ['buffer',['buffer',['../d3/dec/classMeasurementsBuffer.html#ae724179a2fe1328c4488e50026b7ff26',1,'MeasurementsBuffer']]],
   ['building',['BUILDING',['../df/d64/classLasSpecification.html#a4d65c2f6897e7a14b20c33ca1a68b33f',1,'LasSpecification']]]
 ];

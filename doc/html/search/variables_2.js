@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['c',['C',['../d7/d84/classrigidmotion_1_1RigidMotion.html#aa5c886a5a11975a809580318ba5cdc42',1,'rigidmotion::RigidMotion']]],
   ['cache_5faligning',['cache_aligning',['../db/d69/classHelicopterPlatform.html#a08d6a1486365bc4bab38844c69dd728f',1,'HelicopterPlatform']]],
   ['cache_5fspeedupfinished',['cache_speedUpFinished',['../db/d69/classHelicopterPlatform.html#a482a28380f0869ba415ff7b394d0d4a3',1,'HelicopterPlatform']]],
   ['cache_5fturning',['cache_turning',['../db/d69/classHelicopterPlatform.html#ac0e16b0d3f3bb4f086487b2070f946da',1,'HelicopterPlatform']]],
@@ -31,6 +32,7 @@ var searchData=
   ['cached_5fvectortotarget',['cached_vectorToTarget',['../df/d1e/classPlatform.html#a56c1a52e68b521c2c7634c801acefb8e',1,'Platform']]],
   ['cached_5fvectortotarget_5fxy',['cached_vectorToTarget_xy',['../df/d1e/classPlatform.html#a275a2e5fc09e2d8076bc7bcd74fccca7',1,'Platform']]],
   ['calcechowidth',['calcEchowidth',['../db/da6/classFullWaveformPulseRunnable.html#ab817063a50399ea3b1ba7b9cb4a3165b',1,'FullWaveformPulseRunnable::calcEchowidth()'],['../dc/d42/classScanner.html#aca065cd1d5ef6bfe59ddcecd270a7393',1,'Scanner::calcEchowidth()']]],
+  ['canonicalreflection',['canonicalReflection',['../dc/df6/classrigidmotion_1_1RigidMotionR3Factory.html#a76ccff05613bbeb96b437b1101f93cbb',1,'rigidmotion::RigidMotionR3Factory']]],
   ['cfg_5falignmentthreshold',['cfg_alignmentThreshold',['../db/d69/classHelicopterPlatform.html#ab641cbc77373c66a131b20ac91d0131b',1,'HelicopterPlatform']]],
   ['cfg_5fdevice_5faccuracy_5fm',['cfg_device_accuracy_m',['../d8/d6b/classAbstractDetector.html#ae14086d0d232e23911a7ec99dff6299a',1,'AbstractDetector']]],
   ['cfg_5fdevice_5faveragepower_5fw',['cfg_device_averagePower_w',['../dc/d42/classScanner.html#aaa2dbf3a4be70f3543cea8c43089d24a',1,'Scanner']]],
@@ -97,7 +99,8 @@ var searchData=
   ['cond_5f',['cond_',['../d3/dce/classthread__pool.html#a69ede521e28800573f1a9eae32cd45f4',1,'thread_pool']]],
   ['condvar',['condvar',['../d1/d7b/classSimulation.html#abce1df45c8d23deaf580f93dc14a6e6a',1,'Simulation']]],
   ['creators',['creators',['../d7/deb/classlogger__factory.html#aef6b2c9518169bfa46d7bccb04be8aa5',1,'logger_factory']]],
-  ['currentgpstime',['currentGpsTime',['../d6/d9e/classAbstractPulseRunnable.html#a743a064a0f548746bcee315cdca1a369',1,'AbstractPulseRunnable']]],
+  ['currentgpstime',['currentGpsTime',['../d6/d9e/classAbstractPulseRunnable.html#a9e6215211c94b37b40f9d0e724c053fd',1,'AbstractPulseRunnable']]],
+  ['currentgpstime_5fms',['currentGpsTime_ms',['../d1/d7b/classSimulation.html#a1afafff95801808cecac3eda24bcefbc',1,'Simulation']]],
   ['currentpulsenum',['currentPulseNum',['../d6/d9e/classAbstractPulseRunnable.html#ac5d3bcb0892688c12fe36b128d07c395',1,'AbstractPulseRunnable']]],
   ['currentscanlinepulse',['currentScanLinePulse',['../d4/dfd/classOscillatingMirrorBeamDeflector.html#aad09aab136c10bc85619ce30cb78a4ac',1,'OscillatingMirrorBeamDeflector']]],
   ['cyclemeasurements',['cycleMeasurements',['../db/da6/classFullWaveformPulseRunnable.html#a77ea04182b4e55b08a7b216eb73ff47a',1,'FullWaveformPulseRunnable::cycleMeasurements()'],['../dc/d42/classScanner.html#a68086d374d2968715ceefc3e2aaf8d2d',1,'Scanner::cycleMeasurements()']]],

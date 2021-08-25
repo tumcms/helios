@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['a',['A',['../d1/d2b/classMarquardtFitter.html#aaba141f675faab660d793e3b0e7cb4f8',1,'MarquardtFitter']]],
+  ['a',['A',['../d7/d84/classrigidmotion_1_1RigidMotion.html#ae3525a13930940febd66c3c89e185303',1,'rigidmotion::RigidMotion::A()'],['../d1/d2b/classMarquardtFitter.html#aaba141f675faab660d793e3b0e7cb4f8',1,'MarquardtFitter::A()']]],
   ['a1',['a1',['../d6/d7f/classRotationOrder.html#ae1e79a9be04701a8498ff9d0d0ffbda5',1,'RotationOrder']]],
   ['a2',['a2',['../d6/d7f/classRotationOrder.html#a94e6d412fb6ea94d460e9215c84d6442',1,'RotationOrder']]],
   ['a3',['a3',['../d6/d7f/classRotationOrder.html#a1e279094daf5b6381ecfa9b38b66f89f',1,'RotationOrder']]],

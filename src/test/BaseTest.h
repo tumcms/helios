@@ -36,7 +36,7 @@ public:
     // ***  GETTERS and SETTERS  *** //
     // ***************************** //
     /**
-     * Obtain the test name
+     * @brief Obtain the test name
      * @return Test name
      */
     std::string getName(){return name;}
@@ -67,6 +67,8 @@ public:
     /**
      * @brief Perform the test and output its final status
      * @param out Output stream used to output test final status
+     * @param color True to enable coloring when reporting test status.
+     *  False otherwise
      */
     void test(std::ostream &out=std::cout, bool color=true);
 };

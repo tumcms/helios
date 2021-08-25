@@ -105,9 +105,9 @@ Collaboration diagram for PyHeliosSimulation:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af3d3d2b55c17a42296d2f837c23a9eba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d76/classPyHeliosSimulation.html#af3d3d2b55c17a42296d2f837c23a9eba">PyHeliosSimulation</a> (std::string surveyPath, std::string assetsPath=&quot;assets/&quot;, std::string outputPath=&quot;output/&quot;, size_t numThreads=0, bool lasOutput=false, bool zipOutput=false)</td></tr>
-<tr class="memdesc:af3d3d2b55c17a42296d2f837c23a9eba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a <a class="el" href="../../d3/d76/classPyHeliosSimulation.html">PyHeliosSimulation</a> instance.  <a href="#af3d3d2b55c17a42296d2f837c23a9eba">More...</a><br /></td></tr>
-<tr class="separator:af3d3d2b55c17a42296d2f837c23a9eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c2f3ba2bf2df619c681d5d6e28ec9ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d76/classPyHeliosSimulation.html#a7c2f3ba2bf2df619c681d5d6e28ec9ae">PyHeliosSimulation</a> (std::string surveyPath, std::string assetsPath=&quot;assets/&quot;, std::string outputPath=&quot;output/&quot;, size_t numThreads=0, bool lasOutput=false, bool las10=false, bool zipOutput=false)</td></tr>
+<tr class="memdesc:a7c2f3ba2bf2df619c681d5d6e28ec9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a <a class="el" href="../../d3/d76/classPyHeliosSimulation.html">PyHeliosSimulation</a> instance.  <a href="#a7c2f3ba2bf2df619c681d5d6e28ec9ae">More...</a><br /></td></tr>
+<tr class="separator:a7c2f3ba2bf2df619c681d5d6e28ec9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a513e4f7ab87159540794d442207da9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d76/classPyHeliosSimulation.html#a5a513e4f7ab87159540794d442207da9">isStarted</a> ()</td></tr>
 <tr class="memdesc:a5a513e4f7ab87159540794d442207da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the simulation has been started or not.  <a href="#a5a513e4f7ab87159540794d442207da9">More...</a><br /></td></tr>
 <tr class="separator:a5a513e4f7ab87159540794d442207da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,18 +175,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d76/classPyHeliosSimulation.html#aed8d9115466ed73e94b93322df6eb127">clearCallback</a> ()</td></tr>
 <tr class="memdesc:aed8d9115466ed73e94b93322df6eb127"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear simulation callback so it will no longer be invoked. <br /></td></tr>
 <tr class="separator:aed8d9115466ed73e94b93322df6eb127"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24f3b68f9595c72dfc7c01e0480c80ec"><td class="memItemLeft" align="right" valign="top"><a id="a24f3b68f9595c72dfc7c01e0480c80ec"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLasOutput</b> (double lasOutput)</td></tr>
-<tr class="separator:a24f3b68f9595c72dfc7c01e0480c80ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c184cf98f62e127a4e5066fa0c3f374"><td class="memItemLeft" align="right" valign="top"><a id="a0c184cf98f62e127a4e5066fa0c3f374"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>getLasOutput</b> ()</td></tr>
 <tr class="separator:a0c184cf98f62e127a4e5066fa0c3f374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a516da50ffec4f8b72840a082f6e958a2"><td class="memItemLeft" align="right" valign="top"><a id="a516da50ffec4f8b72840a082f6e958a2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLasOutput</b> (double lasOutput_)</td></tr>
+<tr class="separator:a516da50ffec4f8b72840a082f6e958a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17d1b8a6f3670fa3f89b9f8d6b1139c"><td class="memItemLeft" align="right" valign="top"><a id="ae17d1b8a6f3670fa3f89b9f8d6b1139c"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getLas10</b> ()</td></tr>
+<tr class="separator:ae17d1b8a6f3670fa3f89b9f8d6b1139c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c71d1821aa329806e32812ca123867"><td class="memItemLeft" align="right" valign="top"><a id="ad3c71d1821aa329806e32812ca123867"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLas10</b> (double las10_)</td></tr>
+<tr class="separator:ad3c71d1821aa329806e32812ca123867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade2b6848e848af70587ea2c4d0eb0e85"><td class="memItemLeft" align="right" valign="top"><a id="ade2b6848e848af70587ea2c4d0eb0e85"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>getZipOutput</b> ()</td></tr>
 <tr class="separator:ade2b6848e848af70587ea2c4d0eb0e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf2d2bd27d10c535e247984317ed7f83"><td class="memItemLeft" align="right" valign="top"><a id="acf2d2bd27d10c535e247984317ed7f83"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setZipOutput</b> (bool zipOutput)</td></tr>
-<tr class="separator:acf2d2bd27d10c535e247984317ed7f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47928b99d27645bbd092c1a7a19ae75f"><td class="memItemLeft" align="right" valign="top"><a id="a47928b99d27645bbd092c1a7a19ae75f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setZipOutput</b> (bool zipOutput_)</td></tr>
+<tr class="separator:a47928b99d27645bbd092c1a7a19ae75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2716558523a01740748f5b5c8c13f87"><td class="memItemLeft" align="right" valign="top"><a id="aa2716558523a01740748f5b5c8c13f87"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d76/classPyHeliosSimulation.html#aa2716558523a01740748f5b5c8c13f87">start</a> ()</td></tr>
 <tr class="memdesc:aa2716558523a01740748f5b5c8c13f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the simulation if possible. Otherwise, <a class="el" href="../../d1/d0f/classPyHeliosException.html">PyHeliosException</a> will be thrown. <br /></td></tr>
@@ -279,6 +285,9 @@ std::shared_ptr&lt; <a class="el" href="../../dd/d8d/classPySimulationCycleCallb
 <tr class="memitem:a2bdb8cac7395f9d63242cf12c2164fc1"><td class="memItemLeft" align="right" valign="top"><a id="a2bdb8cac7395f9d63242cf12c2164fc1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>lasOutput</b> = false</td></tr>
 <tr class="separator:a2bdb8cac7395f9d63242cf12c2164fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41510d1bc49a9e69beda55fd3038859d"><td class="memItemLeft" align="right" valign="top"><a id="a41510d1bc49a9e69beda55fd3038859d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>las10</b> = false</td></tr>
+<tr class="separator:a41510d1bc49a9e69beda55fd3038859d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57fd95b723a315e98d0e2542a22d07e9"><td class="memItemLeft" align="right" valign="top"><a id="a57fd95b723a315e98d0e2542a22d07e9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>zipOutput</b> = false</td></tr>
 <tr class="separator:a57fd95b723a315e98d0e2542a22d07e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -288,8 +297,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>zipOutput</b> = false
 <dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
 <p>Helios++ simulation wrapped to be used from Python </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af3d3d2b55c17a42296d2f837c23a9eba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3d3d2b55c17a42296d2f837c23a9eba">&#9670;&nbsp;</a></span>PyHeliosSimulation()</h2>
+<a id="a7c2f3ba2bf2df619c681d5d6e28ec9ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2f3ba2bf2df619c681d5d6e28ec9ae">&#9670;&nbsp;</a></span>PyHeliosSimulation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,6 +332,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>zipOutput</b> = false
           <td></td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>lasOutput</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>las10</em> = <code>false</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

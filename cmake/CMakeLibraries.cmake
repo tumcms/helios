@@ -28,13 +28,24 @@ include_directories(${GLM_DIR})
 if(WIN32 OR MSVC)
     set(GDAL_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib/gdal/include")
     set(GDAL_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/lib/gdal/lib/gdal_i.lib")
+else()
+    set(GDAL_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib/gdal/include")
+    set(GDAL_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/lib/gdal/lib/libgdal.so")
 endif()
-find_package(GDAL 3.0 REQUIRED)
+find_package(GDAL 3.0)
+if(NOT GDAL_FOUND)
+    message("GDAL was not found on expected paths. Searching system-level ...")
+    unset(GDAL_INCLUDE_DIR)
+    unset(GDAL_LIBRARY)
+    find_package(GDAL 3.0 REQUIRED)
+endif()
 if(GDAL_FOUND)
     message(STATUS "gdal found")
     message("GDAL_INCLUDE_DIRS: " ${GDAL_INCLUDE_DIRS})
     message("GDAL_LIBRARIES: " ${GDAL_LIBRARIES})
     include_directories(${GDAL_INCLUDE_DIRS})
+else()
+    message(WARNING "GDAL was not found")
 endif()
 
 # ZLIB (Linux only)
@@ -96,7 +107,6 @@ if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/lib/armadillo)  # Use armadillo from lib
     set(ARMADILLO_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/lib/armadillo/include)
     if(WIN32)
         set(ARMADILLO_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/lib/armadillo/Release/armadillo.lib)
-
     else()
         set(ARMADILLO_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/lib/armadillo/libarmadillo.so)
     endif()
@@ -110,3 +120,47 @@ endif()
 include_directories(${ARMADILLO_INCLUDE_DIRS})
 message("Armadillo include: " ${ARMADILLO_INCLUDE_DIRS})
 message("Armadillo libraries: " ${ARMADILLO_LIBRARIES})
+
+# PCL
+if(PCL_BINDING)
+    find_package(Eigen3 REQUIRED NO_MODULE)
+    if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/lib/vtk/install)  # Use VTK from lib
+        set(VTK_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/vtk/build/)
+        find_package(VTK REQUIRED)
+    else()  # Try to find already installed VTK
+        find_package(VTK REQUIRED)
+    endif()
+    if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install)  # Use PCL from lib
+        set(PCL_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/include)
+        set(PCL_LIBRARIES
+            ${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_common.so
+            ${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_features.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_filters.so
+            ${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_io_ply.so
+            ${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_io.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_kdtree.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_keypoints.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_ml.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_octree.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_outofcore.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_people.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_recognition.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_registration.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_sample_consensus.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_search.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_segmentation.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_stereo.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_surface.so
+            #${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_tracking.so
+            ${CMAKE_CURRENT_SOURCE_DIR}/lib/pcl/install/lib/libpcl_visualization.so
+        )
+    else()  # Try to find already installed PCL
+        find_package(PCL REQUIRED 1.12)
+    endif()
+    include_directories(${VTK_INCLUDE_DIRS} ${PCL_INCLUDE_DIRS})
+    add_definitions(-DPCL_BINDING) # Define PCL has been binded
+    message("VTK include: " ${VTK_INCLUDE_DIRS})
+    message("VTK libraries: " ${VTK_LIBRARIES})
+    message("PCL include: " ${PCL_INCLUDE_DIRS})
+    message("PCL libraries: " ${PCL_LIBRARIES})
+endif()

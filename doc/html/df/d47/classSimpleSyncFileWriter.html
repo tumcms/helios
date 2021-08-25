@@ -105,7 +105,7 @@ Inheritance diagram for SimpleSyncFileWriter:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/dd0/classSimpleSyncFileWriter__inherit__graph.png" border="0" usemap="#SimpleSyncFileWriter_inherit__map" alt="Inheritance graph"/></div>
 <map name="SimpleSyncFileWriter_inherit__map" id="SimpleSyncFileWriter_inherit__map">
-<area shape="rect" id="node3" href="../../de/d2a/classZipSyncFileWriter.html" title="ZipSyncFileWriter implementation fro zipped text output format. " alt="" coords="16,155,143,181"/>
+<area shape="rect" id="node3" href="../../de/d2a/classZipSyncFileWriter.html" title="ZipSyncFileWriter implementation for zipped text output format. " alt="" coords="16,155,143,181"/>
 <area shape="rect" id="node2" href="../../d1/d0e/classSyncFileWriter.html" title="Abstract class defining common behavior for all synchronous file writers. " alt="" coords="25,5,133,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
@@ -171,6 +171,15 @@ Protected Attributes</h2></td></tr>
 std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d47/classSimpleSyncFileWriter.html#a698ad8740f4b8bdb7af111b8545ca6fc">ofs</a></td></tr>
 <tr class="memdesc:a698ad8740f4b8bdb7af111b8545ca6fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output file stream to be used by the simple synchronous file writer. <br /></td></tr>
 <tr class="separator:a698ad8740f4b8bdb7af111b8545ca6fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classSyncFileWriter"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classSyncFileWriter')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d1/d0e/classSyncFileWriter.html">SyncFileWriter</a></td></tr>
+<tr class="memitem:ac81265705f319162477eb0bf969e9334 inherit pro_attribs_classSyncFileWriter"><td class="memItemLeft" align="right" valign="top"><a id="ac81265705f319162477eb0bf969e9334"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0e/classSyncFileWriter.html#ac81265705f319162477eb0bf969e9334">path</a></td></tr>
+<tr class="memdesc:ac81265705f319162477eb0bf969e9334 inherit pro_attribs_classSyncFileWriter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to file to be written. <br /></td></tr>
+<tr class="separator:ac81265705f319162477eb0bf969e9334 inherit pro_attribs_classSyncFileWriter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79190ae81f92c33e8a5aa4c9956266cc inherit pro_attribs_classSyncFileWriter"><td class="memItemLeft" align="right" valign="top"><a id="a79190ae81f92c33e8a5aa4c9956266cc"></a>
+std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0e/classSyncFileWriter.html#a79190ae81f92c33e8a5aa4c9956266cc">mutex</a></td></tr>
+<tr class="memdesc:a79190ae81f92c33e8a5aa4c9956266cc inherit pro_attribs_classSyncFileWriter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex to synchronize concurrent write operations. <br /></td></tr>
+<tr class="separator:a79190ae81f92c33e8a5aa4c9956266cc inherit pro_attribs_classSyncFileWriter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../d1/d0e/classSyncFileWriter.html" title="Abstract class defining common behavior for all synchronous file writers. ">SyncFileWriter</a> implementation for simple text format. </p>

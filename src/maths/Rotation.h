@@ -1,5 +1,15 @@
 #pragma once
 
+#include "RotationOrder.h"
+
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
+#if PYTHON_BINDING
+#include <PythonDVec3.h>
+using pyhelios::PythonDVec3;
+#endif
+
 /**
 * This class implements rotations in a three-dimensional space.
 *
@@ -67,16 +77,6 @@
 * @see RotationOrder
 * @since 1.2
 */
-
-#include "RotationOrder.h"
-
-#include <boost/archive/text_iarchive.hpp>
-#include <boost/archive/text_oarchive.hpp>
-
-#if PYTHON_BINDING
-#include <PythonDVec3.h>
-#endif
-
 class Rotation {
     // ***  SERIALIZATION  *** //
     // *********************** //
@@ -94,7 +94,7 @@ class Rotation {
 public:
     // ***  CONSTRUCTION / DESTRUCTION  *** //
     // ************************************ //
-	Rotation() = default;
+    Rotation() = default;
     Rotation(double q0, double q1, double q2, double q3, bool needsNormalization);
     Rotation(glm::dvec3 axis, double angle);
     Rotation(glm::dvec3 u, glm::dvec3 v);
@@ -149,6 +149,8 @@ public:
 	void applyInverseTo(double* in, double* out);
 	Rotation applyTo(Rotation r);
 	Rotation applyInverseTo(Rotation r);
+	glm::dvec3 operator*(glm::dvec3 u) {return applyTo(u);}
+	Rotation operator*(Rotation r) {return applyTo(r);}
 
     /**
      * @brief Get the roll, pitch and yaw for the Rotation

@@ -115,6 +115,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9e0c4fdd2cfc193ed919e727a0330513"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classArgumentsParser.html#a9e0c4fdd2cfc193ed919e727a0330513">parseTestDir</a> ()</td></tr>
 <tr class="memdesc:a9e0c4fdd2cfc193ed919e727a0330513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse test directory specification (not necessary, default one will be relative path "data/test/")  <a href="#a9e0c4fdd2cfc193ed919e727a0330513">More...</a><br /></td></tr>
 <tr class="separator:a9e0c4fdd2cfc193ed919e727a0330513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb6efa512c250e84d05b0a6c9493b37"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classArgumentsParser.html#affb6efa512c250e84d05b0a6c9493b37">parseDemoRequest</a> ()</td></tr>
+<tr class="memdesc:affb6efa512c250e84d05b0a6c9493b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse demo request argument if any (&ndash;demo)  <a href="#affb6efa512c250e84d05b0a6c9493b37">More...</a><br /></td></tr>
+<tr class="separator:affb6efa512c250e84d05b0a6c9493b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22628bb734395a2c0c4a1be378bef422"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classArgumentsParser.html#a22628bb734395a2c0c4a1be378bef422">parseSurveyPath</a> ()</td></tr>
 <tr class="memdesc:a22628bb734395a2c0c4a1be378bef422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the survery path from invocation arguments.  <a href="#a22628bb734395a2c0c4a1be378bef422">More...</a><br /></td></tr>
 <tr class="separator:a22628bb734395a2c0c4a1be378bef422"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,6 +161,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:a713a2349b0f56232c94ac24327f02f19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classArgumentsParser.html#a713a2349b0f56232c94ac24327f02f19">parseLasOutput</a> ()</td></tr>
 <tr class="memdesc:a713a2349b0f56232c94ac24327f02f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the LAS output specification.  <a href="#a713a2349b0f56232c94ac24327f02f19">More...</a><br /></td></tr>
 <tr class="separator:a713a2349b0f56232c94ac24327f02f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9124496c63acc99a4815099ffd720e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classArgumentsParser.html#af9124496c63acc99a4815099ffd720e4">parseLas10</a> ()</td></tr>
+<tr class="memdesc:af9124496c63acc99a4815099ffd720e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the LAS version output specification.  <a href="#af9124496c63acc99a4815099ffd720e4">More...</a><br /></td></tr>
+<tr class="separator:af9124496c63acc99a4815099ffd720e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a367b681f421a3a840de6c46b227aba11"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classArgumentsParser.html#a367b681f421a3a840de6c46b227aba11">parseZipOutput</a> ()</td></tr>
 <tr class="memdesc:a367b681f421a3a840de6c46b227aba11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the ZIP output specification.  <a href="#a367b681f421a3a840de6c46b227aba11">More...</a><br /></td></tr>
 <tr class="separator:a367b681f421a3a840de6c46b227aba11"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -311,6 +317,26 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="affb6efa512c250e84d05b0a6c9493b37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affb6efa512c250e84d05b0a6c9493b37">&#9670;&nbsp;</a></span>parseDemoRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ArgumentsParser::parseDemoRequest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parse demo request argument if any (&ndash;demo) </p>
+<dl class="section return"><dt>Returns</dt><dd>Parsed demo if any or "NULL" if no demo was requested </dd></dl>
+
+</div>
+</div>
 <a id="a80d71b40ea4187c2ab52f146f8e88cf3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a80d71b40ea4187c2ab52f146f8e88cf3">&#9670;&nbsp;</a></span>parseDisableLegNoise()</h2>
 
@@ -408,6 +434,26 @@ Private Attributes</h2></td></tr>
 
 <p>Parse help request argument if any (-h or &ndash;help) </p>
 <dl class="section return"><dt>Returns</dt><dd>true if help was requested, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="af9124496c63acc99a4815099ffd720e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9124496c63acc99a4815099ffd720e4">&#9670;&nbsp;</a></span>parseLas10()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ArgumentsParser::parseLas10 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parse the LAS version output specification. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if LAS v1.0 was requested, False otherwise. </dd></dl>
 
 </div>
 </div>

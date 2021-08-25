@@ -128,6 +128,8 @@ std::shared_ptr&lt; <a class="el" href="../../d7/d92/classAbstractBeamDeflector.
 <tr class="memitem:aa42ea480334aff8a009fec3418e1b50b"><td class="memItemLeft" align="right" valign="top"><a id="aa42ea480334aff8a009fec3418e1b50b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>_clone</b> (std::shared_ptr&lt; <a class="el" href="../../d7/d92/classAbstractBeamDeflector.html">AbstractBeamDeflector</a> &gt; abd) override</td></tr>
 <tr class="separator:aa42ea480334aff8a009fec3418e1b50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f5dedacb1935a2c8a7397de0794148"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7e/classPolygonMirrorBeamDeflector.html#ad4f5dedacb1935a2c8a7397de0794148">applySettings</a> (std::shared_ptr&lt; <a class="el" href="../../d0/d23/classScannerSettings.html">ScannerSettings</a> &gt;) override</td></tr>
+<tr class="separator:ad4f5dedacb1935a2c8a7397de0794148"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a7eb7692bb06374a41c2f406c36ea13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7e/classPolygonMirrorBeamDeflector.html#a8a7eb7692bb06374a41c2f406c36ea13">doSimStep</a> () override</td></tr>
 <tr class="separator:a8a7eb7692bb06374a41c2f406c36ea13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab02b19f592551bfebba9c496956402e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7e/classPolygonMirrorBeamDeflector.html#ab02b19f592551bfebba9c496956402e3">lastPulseLeftDevice</a> () override</td></tr>
@@ -136,9 +138,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>_clone</b> (std::shar
 <tr class="memitem:a1eba6f027b964c01653685dca48daf5d inherit pub_methods_classAbstractBeamDeflector"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/classAbstractBeamDeflector.html#a1eba6f027b964c01653685dca48daf5d">AbstractBeamDeflector</a> (double scanAngleMax_rad, double scanFreqMax_Hz, double scanFreqMin_Hz)</td></tr>
 <tr class="memdesc:a1eba6f027b964c01653685dca48daf5d inherit pub_methods_classAbstractBeamDeflector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base constructor for beam deflectors.  <a href="../../d7/d92/classAbstractBeamDeflector.html#a1eba6f027b964c01653685dca48daf5d">More...</a><br /></td></tr>
 <tr class="separator:a1eba6f027b964c01653685dca48daf5d inherit pub_methods_classAbstractBeamDeflector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ec50f9f8279b097b4ec91f9dc0b2b32 inherit pub_methods_classAbstractBeamDeflector"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/classAbstractBeamDeflector.html#a9ec50f9f8279b097b4ec91f9dc0b2b32">applySettings</a> (std::shared_ptr&lt; <a class="el" href="../../d0/d23/classScannerSettings.html">ScannerSettings</a> &gt; settings)</td></tr>
-<tr class="memdesc:a9ec50f9f8279b097b4ec91f9dc0b2b32 inherit pub_methods_classAbstractBeamDeflector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply given scanner settings to beam deflector.  <a href="../../d7/d92/classAbstractBeamDeflector.html#a9ec50f9f8279b097b4ec91f9dc0b2b32">More...</a><br /></td></tr>
-<tr class="separator:a9ec50f9f8279b097b4ec91f9dc0b2b32 inherit pub_methods_classAbstractBeamDeflector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae65d89b6a449aa58656a0416e1fd2fbc inherit pub_methods_classAbstractBeamDeflector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dcb/classRotation.html">Rotation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d92/classAbstractBeamDeflector.html#ae65d89b6a449aa58656a0416e1fd2fbc">getEmitterRelativeAttitude</a> ()</td></tr>
 <tr class="memdesc:ae65d89b6a449aa58656a0416e1fd2fbc inherit pub_methods_classAbstractBeamDeflector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the relative emitter attitude.  <a href="../../d7/d92/classAbstractBeamDeflector.html#ae65d89b6a449aa58656a0416e1fd2fbc">More...</a><br /></td></tr>
 <tr class="separator:ae65d89b6a449aa58656a0416e1fd2fbc inherit pub_methods_classAbstractBeamDeflector"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -268,6 +267,35 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad4f5dedacb1935a2c8a7397de0794148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f5dedacb1935a2c8a7397de0794148">&#9670;&nbsp;</a></span>applySettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PolygonMirrorBeamDeflector::applySettings </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="../../d0/d23/classScannerSettings.html">ScannerSettings</a> &gt;&#160;</td>
+          <td class="paramname"><em>settings</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d7/d92/classAbstractBeamDeflector.html#a9ec50f9f8279b097b4ec91f9dc0b2b32" title="Apply given scanner settings to beam deflector. ">AbstractBeamDeflector::applySettings</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../d7/d92/classAbstractBeamDeflector.html#a9ec50f9f8279b097b4ec91f9dc0b2b32">AbstractBeamDeflector</a>.</p>
+
+</div>
+</div>
 <a id="a8a7eb7692bb06374a41c2f406c36ea13"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a7eb7692bb06374a41c2f406c36ea13">&#9670;&nbsp;</a></span>doSimStep()</h2>
 

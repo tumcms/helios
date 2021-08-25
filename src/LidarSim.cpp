@@ -20,8 +20,10 @@ namespace fs = boost::filesystem;
 #include <FileUtils.h>
 #include <armadillo>
 #include <iomanip>
+#ifdef PCL_BINDING
+#include <demo/DemoSelector.h>
+#endif
 
-using namespace std;
 void doTests(std::string const & testDir);
 
 // LOGGING FLAGS (DO NOT MODIFY HERE BUT IN logging.hpp makeDefault())
@@ -30,7 +32,7 @@ bool    logging::LOGGING_SHOW_TRACE, logging::LOGGING_SHOW_DEBUG,
         logging::LOGGING_SHOW_ERR;
 
 void printHelp(){
-    cout << "helios++ help:\n\n"
+    std::cout << "helios++ help:\n\n"
         << "\tSyntax: helios++ <survey_file_path> [OPTIONAL ARGUMENTS]\n\n"
         << "\tOPTIONAL ARGUMENTS:\n\n"
         << "\t\t-h or --help : Show this help\n\n"
@@ -62,9 +64,10 @@ void printHelp(){
         << "\n\t\t\tYYYY-mm-DD HH::MM::SS\n"
         << "\t\t\t\tBy default: a random seed is generated\n\n"
         << "\t\t--lasOutput : Use this flag to generate the output point cloud "
-		   "in LAS format (v 1.0)\n\n"
-		<< "\t\t--zipOutput : Use this flag to generate compressed output\n\n"
-		<< "\t\t--lasScale : Specify the decimal scale factor for LAS output"
+		   "in LAS format (v 1.4)\n\n"
+        << "\t\t--las10: Use this flag to write in LAS format (v 1.0)\n\n"
+        << "\t\t--zipOutput : Use this flag to generate compressed output\n\n"
+        << "\t\t--lasScale : Specify the decimal scale factor for LAS output"
         << "\n\n"
         << "\t\t-j or --njobs or --nthreads <integer> : Specify the number of"
         << "\n\t\t\tjobs to be used to compute the simulation\n"
@@ -93,7 +96,14 @@ void printHelp(){
         << "\t\t-v2 or -vv : Specify the verbosity level to report all "
         <<  "messages\n"
         << "\t\t\tBy default: only information and errors are reported\n\n"
-        << endl;
+
+        #ifdef PCL_BINDING
+        << "\n\n\tDEV-MODE ONLY ARGUMENTS:\n\n"
+           "\t\t--demo <demo_name>\n"
+           "\t\t\tRun demo with given name.\n"
+           "\t\t\t\tFor example: --demo simple_primitives\n\n"
+        #endif
+        << std::endl;
 }
 
 int main(int argc, char** argv) {
@@ -105,10 +115,17 @@ int main(int argc, char** argv) {
 	}
 	else if(argc > 1){
 	    std::string inputPath, outputPath;
+	    std::string demo = ap.parseDemoRequest();
 	    if(ap.parseTestRequest()) {
             doTests(ap.parseTestDir());
             done = true;
         }
+        #ifdef PCL_BINDING
+	    else if(demo != "NULL"){
+            HeliosDemos::DemoSelector::getInstance()->select(demo);
+	        done = true;
+	    }
+        #endif
 	    else if(ap.parseUnzip(&inputPath, &outputPath)){
 	        FileUtils::unzipFile(inputPath, outputPath);
 	        done = true;
@@ -141,9 +158,9 @@ int main(int argc, char** argv) {
         logging::INFO(ss.str());
 
         // Handle default randomness generator
-        string seed = ap.parseSeed();
+        std::string seed = ap.parseSeed();
         if(seed != ""){
-            stringstream ss;
+            std::stringstream ss;
             ss << "seed: " << seed;
             logging::INFO(ss.str());
             setDefaultRandomnessGeneratorSeed(seed);
@@ -166,6 +183,7 @@ int main(int argc, char** argv) {
             ap.parseDisableLegNoise(),
             ap.parseRebuildScene(),
             ap.parseLasOutput(),
+            ap.parseLas10(),
             ap.parseZipOutput(),
             ap.parseFixedIncidenceAngle(),
             ap.parseLasScale()
@@ -176,9 +194,9 @@ int main(int argc, char** argv) {
 }
 
 void LidarSim::init(
-    string surveyPath,
-    string assetsPath,
-    string outputPath,
+    std::string surveyPath,
+    std::string assetsPath,
+    std::string outputPath,
     bool writeWaveform,
     bool calcEchowidth,
     size_t njobs,
@@ -187,6 +205,7 @@ void LidarSim::init(
     bool legNoiseDisabled,
     bool rebuildScene,
     bool lasOutput,
+    bool las10,
     bool zipOutput,
     bool fixedIncidenceAngle,
     double lasScale
@@ -196,21 +215,22 @@ void LidarSim::init(
 	    << "assetsPath: \"" << assetsPath << "\"\n"
 	    << "outputPath: \"" << outputPath << "\"\n"
 	    << "writeWaveform: " << writeWaveform << "\n"
-        << "calcEchowidth: " << calcEchowidth << "\n"
+            << "calcEchowidth: " << calcEchowidth << "\n"
 	    << "fullWaveNoise: " << fullWaveNoise << "\n"
 	    << "njobs: " << njobs << "\n"
 	    << "platformNoiseDisabled: " << platformNoiseDisabled << "\n"
 	    << "legNoiseDisabled: " << legNoiseDisabled << "\n"
 	    << "rebuildScene: " << rebuildScene << "\n"
 	    << "lasOutput: " << lasOutput << "\n"
+            << "las10: " << las10 << "\n"
 	    << "fixedIncidenceAngle: " << fixedIncidenceAngle << std::endl;
     logging::INFO(ss.str());
 
 	// Load survey description from XML file:
- 	shared_ptr<XmlSurveyLoader> xmlreader(
+ 	std::shared_ptr<XmlSurveyLoader> xmlreader(
  	    new XmlSurveyLoader(surveyPath, assetsPath)
  	);
-	shared_ptr<Survey> survey = xmlreader->load(
+	std::shared_ptr<Survey> survey = xmlreader->load(
 	    legNoiseDisabled,
 	    rebuildScene
     );
@@ -220,6 +240,7 @@ void LidarSim::init(
 	survey->scanner->setPlatformNoiseDisabled(platformNoiseDisabled);
 	survey->scanner->setFixedIncidenceAngle(fixedIncidenceAngle);
 	survey->scanner->detector->lasOutput = lasOutput;
+        survey->scanner->detector->las10 = las10;
 	survey->scanner->detector->zipOutput = zipOutput;
 	survey->scanner->detector->lasScale = lasScale;
 	if (survey == nullptr) {
@@ -227,11 +248,12 @@ void LidarSim::init(
 		exit(-1);
 	}
 
-	shared_ptr<SurveyPlayback> playback = std::make_shared<SurveyPlayback>(
+	std::shared_ptr<SurveyPlayback> playback=std::make_shared<SurveyPlayback>(
         survey,
         outputPath,
         njobs,
         lasOutput,
+        las10,
         zipOutput
 	);
 

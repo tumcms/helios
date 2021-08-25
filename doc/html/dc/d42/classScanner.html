@@ -133,9 +133,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a000903d1c58e48f770efc0cb53796ee1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a000903d1c58e48f770efc0cb53796ee1">applySettingsFWF</a> (<a class="el" href="../../d4/dfb/classFWFSettings.html">FWFSettings</a> settings)</td></tr>
 <tr class="memdesc:a000903d1c58e48f770efc0cb53796ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply full wave form settings.  <a href="#a000903d1c58e48f770efc0cb53796ee1">More...</a><br /></td></tr>
 <tr class="separator:a000903d1c58e48f770efc0cb53796ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53f531b1602f79e9fed93a5e927e88ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a53f531b1602f79e9fed93a5e927e88ea">doSimStep</a> (<a class="el" href="../../d3/dce/classthread__pool.html">thread_pool</a> &amp;pool, unsigned int legIndex)</td></tr>
-<tr class="memdesc:a53f531b1602f79e9fed93a5e927e88ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform computations for current simulation step.  <a href="#a53f531b1602f79e9fed93a5e927e88ea">More...</a><br /></td></tr>
-<tr class="separator:a53f531b1602f79e9fed93a5e927e88ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada100233ec389007c79c29a438fe784e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#ada100233ec389007c79c29a438fe784e">doSimStep</a> (<a class="el" href="../../d3/dce/classthread__pool.html">thread_pool</a> &amp;pool, unsigned int legIndex, double currentGpsTime)</td></tr>
+<tr class="memdesc:ada100233ec389007c79c29a438fe784e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform computations for current simulation step.  <a href="#ada100233ec389007c79c29a438fe784e">More...</a><br /></td></tr>
+<tr class="separator:ada100233ec389007c79c29a438fe784e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6791b56fa79726f07cfa76e8fa20283"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#ae6791b56fa79726f07cfa76e8fa20283">toString</a> ()</td></tr>
 <tr class="memdesc:ae6791b56fa79726f07cfa76e8fa20283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a string representation of the scanner.  <a href="#ae6791b56fa79726f07cfa76e8fa20283">More...</a><br /></td></tr>
 <tr class="separator:ae6791b56fa79726f07cfa76e8fa20283"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,18 +161,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:a200c10597fe671a374f5ecc45d3410ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dcb/classRotation.html">Rotation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a200c10597fe671a374f5ecc45d3410ae">calcAbsoluteBeamAttitude</a> ()</td></tr>
 <tr class="memdesc:a200c10597fe671a374f5ecc45d3410ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the absolute beam attitude considering the mount relative attitude and the deflector relative attitude.  <a href="#a200c10597fe671a374f5ecc45d3410ae">More...</a><br /></td></tr>
 <tr class="separator:a200c10597fe671a374f5ecc45d3410ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1838e4b99a3cb02f840903ddb6bdda0"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#ad1838e4b99a3cb02f840903ddb6bdda0">calcCurrentGpsTime</a> ()</td></tr>
-<tr class="memdesc:ad1838e4b99a3cb02f840903ddb6bdda0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the current GPS time (milliseconds)  <a href="#ad1838e4b99a3cb02f840903ddb6bdda0">More...</a><br /></td></tr>
-<tr class="separator:ad1838e4b99a3cb02f840903ddb6bdda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874f9b75d9279637ff5e2138e36a93a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a874f9b75d9279637ff5e2138e36a93a7">checkMaxNOR</a> (int nor)</td></tr>
+<tr class="memdesc:a874f9b75d9279637ff5e2138e36a93a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if given number of return (nor) is inside expected boundaries. If scanner maxNOR is 0 or nor is less than maxNOR, then the check is passed (true is returned). Otherwise, it is not passed (false is returned).  <a href="#a874f9b75d9279637ff5e2138e36a93a7">More...</a><br /></td></tr>
+<tr class="separator:a874f9b75d9279637ff5e2138e36a93a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9162783f755f55792d269396ea6a5172"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a9162783f755f55792d269396ea6a5172">handleSimStepNoise</a> (glm::dvec3 &amp;absoluteBeamOrigin, <a class="el" href="../../d5/dcb/classRotation.html">Rotation</a> &amp;absoluteBeamAttitude)</td></tr>
 <tr class="memdesc:a9162783f755f55792d269396ea6a5172"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle position and attitude noise.  <a href="#a9162783f755f55792d269396ea6a5172">More...</a><br /></td></tr>
 <tr class="separator:a9162783f755f55792d269396ea6a5172"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae462efae6ecbcf82967701beeaca6c44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#ae462efae6ecbcf82967701beeaca6c44">handlePulseComputation</a> (<a class="el" href="../../d3/dce/classthread__pool.html">thread_pool</a> &amp;pool, unsigned int const legIndex, glm::dvec3 &amp;absoluteBeamOrigin, <a class="el" href="../../d5/dcb/classRotation.html">Rotation</a> &amp;absoluteBeamAttitude, long currentGpsTime)</td></tr>
-<tr class="memdesc:ae462efae6ecbcf82967701beeaca6c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle pulse computation whatever it is single thread based or thread pool based.  <a href="#ae462efae6ecbcf82967701beeaca6c44">More...</a><br /></td></tr>
-<tr class="separator:ae462efae6ecbcf82967701beeaca6c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7508f260d36401b7ac316ca2897e37d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a7508f260d36401b7ac316ca2897e37d3">handleTrajectoryOutput</a> (long currentGpsTime)</td></tr>
-<tr class="memdesc:a7508f260d36401b7ac316ca2897e37d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle trajectory output whatever it is to output file, to all trajectories vector or to cycle trajectories vector.  <a href="#a7508f260d36401b7ac316ca2897e37d3">More...</a><br /></td></tr>
-<tr class="separator:a7508f260d36401b7ac316ca2897e37d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a0870710d84e7da5b6ae627cef9cf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#aa6a0870710d84e7da5b6ae627cef9cf5">handlePulseComputation</a> (<a class="el" href="../../d3/dce/classthread__pool.html">thread_pool</a> &amp;pool, unsigned int const legIndex, glm::dvec3 &amp;absoluteBeamOrigin, <a class="el" href="../../d5/dcb/classRotation.html">Rotation</a> &amp;absoluteBeamAttitude, double currentGpsTime)</td></tr>
+<tr class="memdesc:aa6a0870710d84e7da5b6ae627cef9cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle pulse computation whatever it is single thread based or thread pool based.  <a href="#aa6a0870710d84e7da5b6ae627cef9cf5">More...</a><br /></td></tr>
+<tr class="separator:aa6a0870710d84e7da5b6ae627cef9cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3055bc70b3f94c747320cd617e36547"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#aa3055bc70b3f94c747320cd617e36547">handleTrajectoryOutput</a> (double currentGpsTime)</td></tr>
+<tr class="memdesc:aa3055bc70b3f94c747320cd617e36547"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle trajectory output whatever it is to output file, to all trajectories vector or to cycle trajectories vector.  <a href="#aa3055bc70b3f94c747320cd617e36547">More...</a><br /></td></tr>
+<tr class="separator:aa3055bc70b3f94c747320cd617e36547"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fbd614f591d9b0b645a4880ace1c8fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a8fbd614f591d9b0b645a4880ace1c8fd">getNumRays</a> ()</td></tr>
 <tr class="memdesc:a8fbd614f591d9b0b645a4880ace1c8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the number of rays.  <a href="#a8fbd614f591d9b0b645a4880ace1c8fd">More...</a><br /></td></tr>
 <tr class="separator:a8fbd614f591d9b0b645a4880ace1c8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -311,31 +311,31 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:ae089decb02e44205831694293c1ded49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/da7/classScannerHead.html">ScannerHead</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#ae089decb02e44205831694293c1ded49">getScannerHead</a> ()</td></tr>
 <tr class="memdesc:ae089decb02e44205831694293c1ded49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Python wrapper for scanner head access.  <a href="#ae089decb02e44205831694293c1ded49">More...</a><br /></td></tr>
 <tr class="separator:ae089decb02e44205831694293c1ded49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a857f6bea695a5559965cb3c9710798a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dc9/classPyBeamDeflectorWrapper.html">PyBeamDeflectorWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a857f6bea695a5559965cb3c9710798a4">getPyBeamDeflector</a> ()</td></tr>
+<tr class="memitem:a857f6bea695a5559965cb3c9710798a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d0e/classpyhelios_1_1PyBeamDeflectorWrapper.html">PyBeamDeflectorWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a857f6bea695a5559965cb3c9710798a4">getPyBeamDeflector</a> ()</td></tr>
 <tr class="memdesc:a857f6bea695a5559965cb3c9710798a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Python wrapper for beam deflector access.  <a href="#a857f6bea695a5559965cb3c9710798a4">More...</a><br /></td></tr>
 <tr class="separator:a857f6bea695a5559965cb3c9710798a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dd3de77fa65be2224d7a55f812af545"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/da9/classPyDetectorWrapper.html">PyDetectorWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a2dd3de77fa65be2224d7a55f812af545">getPyDetectorWrapper</a> ()</td></tr>
+<tr class="memitem:a2dd3de77fa65be2224d7a55f812af545"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/ddf/classpyhelios_1_1PyDetectorWrapper.html">PyDetectorWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a2dd3de77fa65be2224d7a55f812af545">getPyDetectorWrapper</a> ()</td></tr>
 <tr class="memdesc:a2dd3de77fa65be2224d7a55f812af545"><td class="mdescLeft">&#160;</td><td class="mdescRight">Python wrapper for detector access.  <a href="#a2dd3de77fa65be2224d7a55f812af545">More...</a><br /></td></tr>
 <tr class="separator:a2dd3de77fa65be2224d7a55f812af545"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03a379d6afbb13b9f5f1d171d1e1f152"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/de0/classPyIntegerList.html">PyIntegerList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a03a379d6afbb13b9f5f1d171d1e1f152">getSupportedPulseFrequencies</a> ()</td></tr>
+<tr class="memitem:a03a379d6afbb13b9f5f1d171d1e1f152"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d83/classpyhelios_1_1PyIntegerList.html">PyIntegerList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a03a379d6afbb13b9f5f1d171d1e1f152">getSupportedPulseFrequencies</a> ()</td></tr>
 <tr class="memdesc:a03a379d6afbb13b9f5f1d171d1e1f152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Python wrapper for supported pulse frequencies list.  <a href="#a03a379d6afbb13b9f5f1d171d1e1f152">More...</a><br /></td></tr>
 <tr class="separator:a03a379d6afbb13b9f5f1d171d1e1f152"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1228d6fc89c83bf22ca61b8f7f100c2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dcb/classRotation.html">Rotation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a1228d6fc89c83bf22ca61b8f7f100c2b">getRelativeAttitudeByReference</a> ()</td></tr>
 <tr class="memdesc:a1228d6fc89c83bf22ca61b8f7f100c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Python wrapper for head relative emitter attitude access.  <a href="#a1228d6fc89c83bf22ca61b8f7f100c2b">More...</a><br /></td></tr>
 <tr class="separator:a1228d6fc89c83bf22ca61b8f7f100c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc7d4484ec1eeacef6f89608715c3d36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd2/classPythonDVec3.html">PythonDVec3</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#afc7d4484ec1eeacef6f89608715c3d36">getRelativePosition</a> ()</td></tr>
+<tr class="memitem:afc7d4484ec1eeacef6f89608715c3d36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d8f/classpyhelios_1_1PythonDVec3.html">PythonDVec3</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#afc7d4484ec1eeacef6f89608715c3d36">getRelativePosition</a> ()</td></tr>
 <tr class="memdesc:afc7d4484ec1eeacef6f89608715c3d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Python wrapper for head relative emitter position.  <a href="#afc7d4484ec1eeacef6f89608715c3d36">More...</a><br /></td></tr>
 <tr class="separator:afc7d4484ec1eeacef6f89608715c3d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6c208fabe4f7d4c5ae873c1a21119b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d80/classPyNoiseSourceWrapper.html">PyNoiseSourceWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#ab6c208fabe4f7d4c5ae873c1a21119b3">getIntersectionHandlingNoiseSource</a> ()</td></tr>
+<tr class="memitem:ab6c208fabe4f7d4c5ae873c1a21119b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d55/classpyhelios_1_1PyNoiseSourceWrapper.html">PyNoiseSourceWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#ab6c208fabe4f7d4c5ae873c1a21119b3">getIntersectionHandlingNoiseSource</a> ()</td></tr>
 <tr class="memdesc:ab6c208fabe4f7d4c5ae873c1a21119b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Python wrapper for intersection handling noise source.  <a href="#ab6c208fabe4f7d4c5ae873c1a21119b3">More...</a><br /></td></tr>
 <tr class="separator:ab6c208fabe4f7d4c5ae873c1a21119b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8b0ede847601656472a41c62880bd1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/df9/classPyRandomnessGeneratorWrapper.html">PyRandomnessGeneratorWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#ae8b0ede847601656472a41c62880bd1c">getRandGen1</a> ()</td></tr>
+<tr class="memitem:ae8b0ede847601656472a41c62880bd1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d5b/classpyhelios_1_1PyRandomnessGeneratorWrapper.html">PyRandomnessGeneratorWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#ae8b0ede847601656472a41c62880bd1c">getRandGen1</a> ()</td></tr>
 <tr class="memdesc:ae8b0ede847601656472a41c62880bd1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Python wrapper for first randomness generator.  <a href="#ae8b0ede847601656472a41c62880bd1c">More...</a><br /></td></tr>
 <tr class="separator:ae8b0ede847601656472a41c62880bd1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11d11c45c92d9de29d4b064096af1a65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/df9/classPyRandomnessGeneratorWrapper.html">PyRandomnessGeneratorWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a11d11c45c92d9de29d4b064096af1a65">getRandGen2</a> ()</td></tr>
+<tr class="memitem:a11d11c45c92d9de29d4b064096af1a65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d5b/classpyhelios_1_1PyRandomnessGeneratorWrapper.html">PyRandomnessGeneratorWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a11d11c45c92d9de29d4b064096af1a65">getRandGen2</a> ()</td></tr>
 <tr class="memdesc:a11d11c45c92d9de29d4b064096af1a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Python wrapper for second randomness generator.  <a href="#a11d11c45c92d9de29d4b064096af1a65">More...</a><br /></td></tr>
 <tr class="separator:a11d11c45c92d9de29d4b064096af1a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea7abb871b697faec9607edc72a79bbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/dc2/classPyDoubleVector.html">PyDoubleVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#aea7abb871b697faec9607edc72a79bbd">getTimeWave</a> ()</td></tr>
+<tr class="memitem:aea7abb871b697faec9607edc72a79bbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/dec/classpyhelios_1_1PyDoubleVector.html">PyDoubleVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#aea7abb871b697faec9607edc72a79bbd">getTimeWave</a> ()</td></tr>
 <tr class="memdesc:aea7abb871b697faec9607edc72a79bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Python wrapper for time wave vector.  <a href="#aea7abb871b697faec9607edc72a79bbd">More...</a><br /></td></tr>
 <tr class="separator:aea7abb871b697faec9607edc72a79bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAsset"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAsset')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/d97/classAsset.html">Asset</a></td></tr>
@@ -379,10 +379,10 @@ Public Attributes</h2></td></tr>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a38df4b3a19cfe45839004991c74b253c">trajectoryTimeInterval</a> = 0.0</td></tr>
 <tr class="memdesc:a38df4b3a19cfe45839004991c74b253c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time interval between record of trajectory points. When it is exactly 0, then no trajectory points will be recorded. <br /></td></tr>
 <tr class="separator:a38df4b3a19cfe45839004991c74b253c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8af7f001ca4bc13a6a8272e31b4958a"><td class="memItemLeft" align="right" valign="top"><a id="ad8af7f001ca4bc13a6a8272e31b4958a"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#ad8af7f001ca4bc13a6a8272e31b4958a">lastTrajectoryTime</a></td></tr>
-<tr class="memdesc:ad8af7f001ca4bc13a6a8272e31b4958a"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPS time (milliseconds) corresponding to last recorded trajectory point. <br /></td></tr>
-<tr class="separator:ad8af7f001ca4bc13a6a8272e31b4958a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc8e6f98bc56e58cb80670a00585ee98"><td class="memItemLeft" align="right" valign="top"><a id="acc8e6f98bc56e58cb80670a00585ee98"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#acc8e6f98bc56e58cb80670a00585ee98">lastTrajectoryTime</a></td></tr>
+<tr class="memdesc:acc8e6f98bc56e58cb80670a00585ee98"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPS time (milliseconds) corresponding to last recorded trajectory point. <br /></td></tr>
+<tr class="separator:acc8e6f98bc56e58cb80670a00585ee98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33b2ae27e64bc1f870580abc2ac5e645"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dfb/classFWFSettings.html">FWFSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a33b2ae27e64bc1f870580abc2ac5e645">FWF_settings</a></td></tr>
 <tr class="memdesc:a33b2ae27e64bc1f870580abc2ac5e645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full wave form settings for the scanner.  <a href="#a33b2ae27e64bc1f870580abc2ac5e645">More...</a><br /></td></tr>
 <tr class="separator:a33b2ae27e64bc1f870580abc2ac5e645"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -419,6 +419,9 @@ glm::dvec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 std::list&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a8e50d0236a610c467f5a5ef0c9291b48">cfg_device_supportedPulseFreqs_Hz</a></td></tr>
 <tr class="memdesc:a8e50d0236a610c467f5a5ef0c9291b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pulse frequencies (hertz) supoported by the scanner. <br /></td></tr>
 <tr class="separator:a8e50d0236a610c467f5a5ef0c9291b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4812fca171290ee0af1287f19a0d05ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d42/classScanner.html#a4812fca171290ee0af1287f19a0d05ea">maxNOR</a> = 0</td></tr>
+<tr class="memdesc:a4812fca171290ee0af1287f19a0d05ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of returns per pulse. When 0, it means there is not maximum at all.  <a href="#a4812fca171290ee0af1287f19a0d05ea">More...</a><br /></td></tr>
+<tr class="separator:a4812fca171290ee0af1287f19a0d05ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classAsset"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classAsset')"><img src="../../closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="../../de/d97/classAsset.html">Asset</a></td></tr>
 <tr class="memitem:ac37173d6b01d7b8caa7bd786b8de2269 inherit pub_attribs_classAsset"><td class="memItemLeft" align="right" valign="top"><a id="ac37173d6b01d7b8caa7bd786b8de2269"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d97/classAsset.html#ac37173d6b01d7b8caa7bd786b8de2269">id</a> = &quot;&quot;</td></tr>
@@ -779,26 +782,6 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
 
 </div>
 </div>
-<a id="ad1838e4b99a3cb02f840903ddb6bdda0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1838e4b99a3cb02f840903ddb6bdda0">&#9670;&nbsp;</a></span>calcCurrentGpsTime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">long Scanner::calcCurrentGpsTime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compute the current GPS time (milliseconds) </p>
-<dl class="section return"><dt>Returns</dt><dd>Current GPS time (milliseconds) </dd></dl>
-
-</div>
-</div>
 <a id="a622cdd7b35fea5c0dfc279fe5a4f3f1d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a622cdd7b35fea5c0dfc279fe5a4f3f1d">&#9670;&nbsp;</a></span>calcFootprintArea()</h2>
 
@@ -897,8 +880,44 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
 
 </div>
 </div>
-<a id="a53f531b1602f79e9fed93a5e927e88ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53f531b1602f79e9fed93a5e927e88ea">&#9670;&nbsp;</a></span>doSimStep()</h2>
+<a id="a874f9b75d9279637ff5e2138e36a93a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a874f9b75d9279637ff5e2138e36a93a7">&#9670;&nbsp;</a></span>checkMaxNOR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Scanner::checkMaxNOR </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if given number of return (nor) is inside expected boundaries. If scanner maxNOR is 0 or nor is less than maxNOR, then the check is passed (true is returned). Otherwise, it is not passed (false is returned). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nor</td><td>Current number of return </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True of the check is passed, false otherwise </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dc/d42/classScanner.html#a4812fca171290ee0af1287f19a0d05ea" title="Maximum number of returns per pulse. When 0, it means there is not maximum at all. ">Scanner::maxNOR</a> </dd></dl>
+
+</div>
+</div>
+<a id="ada100233ec389007c79c29a438fe784e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada100233ec389007c79c29a438fe784e">&#9670;&nbsp;</a></span>doSimStep()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -913,7 +932,13 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>legIndex</em>&#160;</td>
+          <td class="paramname"><em>legIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>currentGpsTime</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -928,6 +953,7 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
   <table class="params">
     <tr><td class="paramname">pool</td><td>Thread pool used to handle concurrent computations </td></tr>
     <tr><td class="paramname">legIndex</td><td>Index of current leg </td></tr>
+    <tr><td class="paramname">currentGpsTime</td><td>GPS time of current pulse </td></tr>
   </table>
   </dd>
 </dl>
@@ -1205,7 +1231,7 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d7/d80/classPyNoiseSourceWrapper.html">PyNoiseSourceWrapper</a>* Scanner::getIntersectionHandlingNoiseSource </td>
+          <td class="memname"><a class="el" href="../../d4/d55/classpyhelios_1_1PyNoiseSourceWrapper.html">PyNoiseSourceWrapper</a>* Scanner::getIntersectionHandlingNoiseSource </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1321,7 +1347,7 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/dc9/classPyBeamDeflectorWrapper.html">PyBeamDeflectorWrapper</a>* Scanner::getPyBeamDeflector </td>
+          <td class="memname"><a class="el" href="../../d0/d0e/classpyhelios_1_1PyBeamDeflectorWrapper.html">PyBeamDeflectorWrapper</a>* Scanner::getPyBeamDeflector </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1347,7 +1373,7 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d4/da9/classPyDetectorWrapper.html">PyDetectorWrapper</a> * Scanner::getPyDetectorWrapper </td>
+          <td class="memname"><a class="el" href="../../de/ddf/classpyhelios_1_1PyDetectorWrapper.html">PyDetectorWrapper</a> * Scanner::getPyDetectorWrapper </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1371,7 +1397,7 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d7/df9/classPyRandomnessGeneratorWrapper.html">PyRandomnessGeneratorWrapper</a>* Scanner::getRandGen1 </td>
+          <td class="memname"><a class="el" href="../../d2/d5b/classpyhelios_1_1PyRandomnessGeneratorWrapper.html">PyRandomnessGeneratorWrapper</a>* Scanner::getRandGen1 </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1400,7 +1426,7 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d7/df9/classPyRandomnessGeneratorWrapper.html">PyRandomnessGeneratorWrapper</a>* Scanner::getRandGen2 </td>
+          <td class="memname"><a class="el" href="../../d2/d5b/classpyhelios_1_1PyRandomnessGeneratorWrapper.html">PyRandomnessGeneratorWrapper</a>* Scanner::getRandGen2 </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1487,7 +1513,7 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d8/dd2/classPythonDVec3.html">PythonDVec3</a>* Scanner::getRelativePosition </td>
+          <td class="memname"><a class="el" href="../../dd/d8f/classpyhelios_1_1PythonDVec3.html">PythonDVec3</a>* Scanner::getRelativePosition </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1545,7 +1571,7 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/de0/classPyIntegerList.html">PyIntegerList</a>* Scanner::getSupportedPulseFrequencies </td>
+          <td class="memname"><a class="el" href="../../d8/d83/classpyhelios_1_1PyIntegerList.html">PyIntegerList</a>* Scanner::getSupportedPulseFrequencies </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1574,7 +1600,7 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d8/dc2/classPyDoubleVector.html">PyDoubleVector</a>* Scanner::getTimeWave </td>
+          <td class="memname"><a class="el" href="../../da/dec/classpyhelios_1_1PyDoubleVector.html">PyDoubleVector</a>* Scanner::getTimeWave </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1651,8 +1677,8 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
 
 </div>
 </div>
-<a id="ae462efae6ecbcf82967701beeaca6c44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae462efae6ecbcf82967701beeaca6c44">&#9670;&nbsp;</a></span>handlePulseComputation()</h2>
+<a id="aa6a0870710d84e7da5b6ae627cef9cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a0870710d84e7da5b6ae627cef9cf5">&#9670;&nbsp;</a></span>handlePulseComputation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1684,7 +1710,7 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>currentGpsTime</em>&#160;</td>
         </tr>
         <tr>
@@ -1746,8 +1772,8 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
 
 </div>
 </div>
-<a id="a7508f260d36401b7ac316ca2897e37d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7508f260d36401b7ac316ca2897e37d3">&#9670;&nbsp;</a></span>handleTrajectoryOutput()</h2>
+<a id="aa3055bc70b3f94c747320cd617e36547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3055bc70b3f94c747320cd617e36547">&#9670;&nbsp;</a></span>handleTrajectoryOutput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1755,7 +1781,7 @@ std::shared_ptr&lt; <a class="el" href="../../d1/d0e/classSyncFileWriter.html">S
         <tr>
           <td class="memname">void Scanner::handleTrajectoryOutput </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>currentGpsTime</em></td><td>)</td>
           <td></td>
         </tr>
@@ -3038,6 +3064,23 @@ Scanner::alTrajectories </dd></dl>
 
 <p>Full wave form settings for the scanner. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d4/dfb/classFWFSettings.html" title="Full Waveform settings. ">FWFSettings</a> </dd></dl>
+
+</div>
+</div>
+<a id="a4812fca171290ee0af1287f19a0d05ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4812fca171290ee0af1287f19a0d05ea">&#9670;&nbsp;</a></span>maxNOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Scanner::maxNOR = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of returns per pulse. When 0, it means there is not maximum at all. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dc/d42/classScanner.html#a874f9b75d9279637ff5e2138e36a93a7" title="Check if given number of return (nor) is inside expected boundaries. If scanner maxNOR is 0 or nor is...">Scanner::checkMaxNOR</a> </dd></dl>
 
 </div>
 </div>

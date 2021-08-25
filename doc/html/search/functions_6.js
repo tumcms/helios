@@ -8,14 +8,17 @@ var searchData=
   ['finalizeloading',['finalizeLoading',['../d5/d9c/classScene.html#a2998daf42ded207ba8de523d3001298d',1,'Scene']]],
   ['findenvelopmentdirections',['findEnvelopmentDirections',['../d9/d22/classLadLut.html#a50d3618b2cea0f4f9961b806e03a46d0',1,'LadLut']]],
   ['findindexofargument',['findIndexOfArgument',['../d7/d5c/classArgumentsParser.html#a6f5548d30a46011bdfcac0c6638d6ee4',1,'ArgumentsParser']]],
+  ['findinvariantdimensionality',['findInvariantDimensionality',['../d7/d84/classrigidmotion_1_1RigidMotion.html#ac8c8ccf506a652cbafd87f715ec3f392',1,'rigidmotion::RigidMotion']]],
   ['findmaxminhitdistances',['findMaxMinHitDistances',['../db/da6/classFullWaveformPulseRunnable.html#a994cbfe3d1adad4c083fb61cac8df033',1,'FullWaveformPulseRunnable']]],
+  ['findsupertype',['findSuperType',['../d7/d84/classrigidmotion_1_1RigidMotion.html#a2337a41faab77d6f21612394d9c35def',1,'rigidmotion::RigidMotion']]],
+  ['findtype',['findType',['../d7/d84/classrigidmotion_1_1RigidMotion.html#a17cd1f0c5795abe7440223730fb78021',1,'rigidmotion::RigidMotion']]],
   ['finish',['finish',['../d2/db3/classLasSyncFileWriter.html#aed2e463900765fbcaa81ef0ee9830a46',1,'LasSyncFileWriter::finish()'],['../df/d47/classSimpleSyncFileWriter.html#a3b87004076dec9c99689980d1aaccaa9',1,'SimpleSyncFileWriter::finish()'],['../d1/d0e/classSyncFileWriter.html#abff8fc595b60075cc7a3621530a17a55',1,'SyncFileWriter::finish()']]],
   ['firstpass',['firstPass',['../d6/d03/classXYZPointCloudFileLoader.html#af0c6399f452601d947eb88e70ee52aa0',1,'XYZPointCloudFileLoader']]],
   ['fitdata',['fitData',['../d1/d2b/classMarquardtFitter.html#af1764a4025c62f55b8bc107538a2025c',1,'MarquardtFitter']]],
   ['fixedrenew',['fixedRenew',['../d9/d6b/classNoiseSource.html#a4b9a2fc2ed0f32b5fcb9c8597e92127e',1,'NoiseSource']]],
   ['full_5flogger',['full_logger',['../d2/d65/classfull__logger.html#a8757e4f145c6acdd4f1a741d1b8cbb45',1,'full_logger']]],
   ['fullwaveformpulsedetector',['FullWaveformPulseDetector',['../df/d37/classFullWaveformPulseDetector.html#a5b0b1f6e2331c9c1e12ce3fd8eab308b',1,'FullWaveformPulseDetector']]],
-  ['fullwaveformpulserunnable',['FullWaveformPulseRunnable',['../db/da6/classFullWaveformPulseRunnable.html#a8fda4b071c75e62840a5bd6bb9b21be5',1,'FullWaveformPulseRunnable']]],
+  ['fullwaveformpulserunnable',['FullWaveformPulseRunnable',['../db/da6/classFullWaveformPulseRunnable.html#ab713e4e8c1abbb7279b173672c2eef8c',1,'FullWaveformPulseRunnable']]],
   ['fullwavetostring',['fullwaveToString',['../df/d47/classSimpleSyncFileWriter.html#a923fae4cbe9786dfef88890c9ca74c47',1,'SimpleSyncFileWriter']]],
   ['fwfsettings',['FWFSettings',['../d4/dfb/classFWFSettings.html#aeece2d2aef30372b85fc9d1ba7cac29b',1,'FWFSettings']]]
 ];

@@ -2,6 +2,7 @@ var searchData=
 [
   ['ladlut',['ladlut',['../dd/dc4/classScenePart.html#ab97c85e1d868194353a4274f98d8b5f4',1,'ScenePart']]],
   ['lambda',['LAMBDA',['../d1/d2b/classMarquardtFitter.html#a80d09545e15e84af3b566192e63de214',1,'MarquardtFitter']]],
+  ['las10',['las10',['../d8/d6b/classAbstractDetector.html#aac5016e7d73d63069610604156837a76',1,'AbstractDetector::las10()'],['../d6/da1/classSurveyPlayback.html#a8923c803b7e38d0d99272a03aa886888',1,'SurveyPlayback::las10()']]],
   ['lasoutput',['lasOutput',['../d8/d6b/classAbstractDetector.html#a70d7c482e01b01231e6d1d6af7c69774',1,'AbstractDetector::lasOutput()'],['../d6/da1/classSurveyPlayback.html#a1b2a23d061084f30108d2115cbfe313e',1,'SurveyPlayback::lasOutput()']]],
   ['lasscale',['lasScale',['../d8/d6b/classAbstractDetector.html#aae600568ef0e70601193f2a0006b93c3',1,'AbstractDetector']]],
   ['last_5freopen',['last_reopen',['../d8/d63/classfile__logger.html#a5dc97d5b89f897216e9ae5b881265685',1,'file_logger']]],
@@ -10,7 +11,7 @@ var searchData=
   ['lastnumvoxels',['lastNumVoxels',['../d6/d03/classXYZPointCloudFileLoader.html#a46ea40e1e3eeb38dc55f3780deb2d9d2',1,'XYZPointCloudFileLoader']]],
   ['lastsign',['lastSign',['../db/d69/classHelicopterPlatform.html#a2dcfe4799486ac1e7e1b4fac1d25431e',1,'HelicopterPlatform']]],
   ['lastspeed_5fxy',['lastSpeed_xy',['../db/d69/classHelicopterPlatform.html#ad8b9b0fd16bd572afe964682a2be7c73',1,'HelicopterPlatform']]],
-  ['lasttrajectorytime',['lastTrajectoryTime',['../dc/d42/classScanner.html#ad8af7f001ca4bc13a6a8272e31b4958a',1,'Scanner']]],
+  ['lasttrajectorytime',['lastTrajectoryTime',['../dc/d42/classScanner.html#acc8e6f98bc56e58cb80670a00585ee98',1,'Scanner']]],
   ['layer',['layer',['../d1/d0c/classGeoTiffFileLoader.html#acc63888f25ed900bf6f410e24938e308',1,'GeoTiffFileLoader']]],
   ['left',['left',['../d8/d94/classKDTreeNode.html#aa6ce1f60bfeb7592a4f09180c33158d2',1,'KDTreeNode']]],
   ['legelapsedtime_5fms',['legElapsedTime_ms',['../d6/da1/classSurveyPlayback.html#a78dc2aefd26b2d4f36df137d2744bc00',1,'SurveyPlayback']]],

@@ -96,7 +96,7 @@ public:
         glm::dvec3 absoluteBeamOrigin,
         Rotation absoluteBeamAttitude,
         int currentPulseNum,
-        long currentGpsTime,
+        double currentGpsTime,
         bool writeWaveform,
         bool calcEchowidth,
         std::vector<Measurement> * allMeasurements,
@@ -229,7 +229,8 @@ private:
         std::vector<double> &fullwave,
         double distanceThreshold,
         double minHitTime_ns,
-        double nsPerBin
+        double nsPerBin,
+        int peakIntensityIndex
     );
     /**
      * @brief Digest a previously populated full waveform vector,
@@ -308,7 +309,7 @@ private:
 	    double max_time,
 	    glm::dvec3 & beamOrigin,
 	    glm::dvec3 & beamDir,
-	    long gpstime,
+        double gpstime,
 	    bool fullWaveNoise,
 	    RandomnessGenerator<double> &rg2
     );

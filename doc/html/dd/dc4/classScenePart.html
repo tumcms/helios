@@ -119,6 +119,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a71eb84286d18f40a8c442bc6ec4cfa61"><td class="memItemLeft" align="right" valign="top"><a id="a71eb84286d18f40a8c442bc6ec4cfa61"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ScenePart</b> (<a class="el" href="../../dd/dc4/classScenePart.html">ScenePart</a> &amp;sp)</td></tr>
 <tr class="separator:a71eb84286d18f40a8c442bc6ec4cfa61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad77755e3d5bf661ef5a69ca848de833d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc4/classScenePart.html#ad77755e3d5bf661ef5a69ca848de833d">addObj</a> (<a class="el" href="../../d0/d92/classWavefrontObj.html">WavefrontObj</a> *obj)</td></tr>
+<tr class="memdesc:ad77755e3d5bf661ef5a69ca848de833d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the primitives of a <a class="el" href="../../d0/d92/classWavefrontObj.html" title="Class representing a .obj loaded file. ">WavefrontObj</a> to the <a class="el" href="../../dd/dc4/classScenePart.html" title="Class representing a scene part. ">ScenePart</a>.  <a href="#ad77755e3d5bf661ef5a69ca848de833d">More...</a><br /></td></tr>
+<tr class="separator:ad77755e3d5bf661ef5a69ca848de833d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa17fabe6290c0c01de162457f758833a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d2/da0/classVertex.html">Vertex</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc4/classScenePart.html#aa17fabe6290c0c01de162457f758833a">getAllVertices</a> ()</td></tr>
 <tr class="memdesc:aa17fabe6290c0c01de162457f758833a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain all vertices in the scene part.  <a href="#aa17fabe6290c0c01de162457f758833a">More...</a><br /></td></tr>
 <tr class="separator:aa17fabe6290c0c01de162457f758833a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,6 +132,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:a82912d3e287312e90e622b512a653df0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc4/classScenePart.html#a82912d3e287312e90e622b512a653df0">splitSubparts</a> ()</td></tr>
 <tr class="memdesc:a82912d3e287312e90e622b512a653df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split each subpart into a different scene part, with the first one corresponding to this scene part.  <a href="#a82912d3e287312e90e622b512a653df0">More...</a><br /></td></tr>
 <tr class="separator:a82912d3e287312e90e622b512a653df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4fe89589057061c7917b1476d268ee"><td class="memItemLeft" align="right" valign="top"><a id="a0e4fe89589057061c7917b1476d268ee"></a>
+<a class="el" href="../../dd/dc4/classScenePart.html">ScenePart</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc4/classScenePart.html#a0e4fe89589057061c7917b1476d268ee">operator=</a> (const <a class="el" href="../../dd/dc4/classScenePart.html">ScenePart</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a0e4fe89589057061c7917b1476d268ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assigment operator. <br /></td></tr>
+<tr class="separator:a0e4fe89589057061c7917b1476d268ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -194,6 +201,32 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class representing a scene part. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad77755e3d5bf661ef5a69ca848de833d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad77755e3d5bf661ef5a69ca848de833d">&#9670;&nbsp;</a></span>addObj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScenePart::addObj </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d92/classWavefrontObj.html">WavefrontObj</a> *&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add the primitives of a <a class="el" href="../../d0/d92/classWavefrontObj.html" title="Class representing a .obj loaded file. ">WavefrontObj</a> to the <a class="el" href="../../dd/dc4/classScenePart.html" title="Class representing a scene part. ">ScenePart</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Pointer to a loaded OBJ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa17fabe6290c0c01de162457f758833a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa17fabe6290c0c01de162457f758833a">&#9670;&nbsp;</a></span>getAllVertices()</h2>
 
