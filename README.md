@@ -4,7 +4,7 @@
 
 > Heidelberg LiDAR Operations Simulator ++
 
-![Logo](h++_bk_++.png)
+<img src="https://github.com/tumcms/helios/blob/main/h%2B%2B_bk_%2B%2B.png" width="75%">
 
 HELIOS++ is a general-purpose software package for simulation of terrestrial, mobile and airborne laser scanning surveys written in C++11. 
 It is developed and maintained by the [3DGeo Research Group](https://uni-heidelberg.de/3dgeo) at Heidelberg University.
@@ -12,6 +12,26 @@ It is developed and maintained by the [3DGeo Research Group](https://uni-heidelb
 ## 💻 Download
 
 Precompiled versions for Windows and Linux are available under [releases](https://github.com/3dgeo-heidelberg/helios/releases).
+
+## :whale2: Docker
+A docker was made available (no python support yet)
+
+```
+git clone https://github.com/tumcms/helios
+cd helios /docker
+```
+To start the docker run:
+
+```
+UUID="$(id -u)" GID="$(id -g)" docker-compose run helios
+```
+
+To start the docker as daemon:
+```
+UUID="$(id -u)" GID="$(id -g)" docker-compose up -d
+docker-compose exec -u phaethon helios bash
+```
+Do not forget to shutdown the docker after use with docker-compose down
 
 ## ℹ Documentation
 
