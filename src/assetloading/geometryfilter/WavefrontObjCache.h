@@ -8,6 +8,7 @@
 #include "WavefrontObj.h"
 #include <list>
 #include <unordered_map>
+#include <string>
 
 typedef std::string key_type;
 typedef WavefrontObj *value_type;
