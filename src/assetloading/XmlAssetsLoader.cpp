@@ -32,6 +32,9 @@ namespace fs = boost::filesystem;
 
 #include "MathConverter.h"
 #include "TimeWatcher.h"
+
+
+
 // ***  CONSTRUCTION / DESTRUCTION  *** //
 // ************************************ //
 
@@ -66,7 +69,9 @@ XmlAssetsLoader::createAssetFromXml(
 
   std::shared_ptr<Asset> result;
   if (type == "platform") {
-    result = std::dynamic_pointer_cast<Asset>(createPlatformFromXml(assetNode));
+    result = std::dynamic_pointer_cast<Asset>(
+        createPlatformFromXml(assetNode)
+    );
   } else if (type == "platformSettings") {
     result = std::dynamic_pointer_cast<Asset>(
         createPlatformSettingsFromXml(assetNode));

@@ -65,6 +65,10 @@ var hierarchy =
       [ "HeliosTests::SurveyCopyTest", "de/d9c/classHeliosTests_1_1SurveyCopyTest.html", null ],
       [ "HeliosTests::VoxelParsingTest", "da/d8d/classHeliosTests_1_1VoxelParsingTest.html", null ]
     ] ],
+    [ "BlockAllocator< Class >", "d9/d47/classBlockAllocator.html", null ],
+    [ "BlockAllocator< LightKDTreeNode >", "d9/d47/classBlockAllocator.html", [
+      [ "LightKDTreeNodeBlockAllocator", "dd/d04/classLightKDTreeNodeBlockAllocator.html", null ]
+    ] ],
     [ "Color4f", "db/d02/classColor4f.html", null ],
     [ "HeliosDemos::DemoSelector", "df/d3f/classHeliosDemos_1_1DemoSelector.html", null ],
     [ "Directions", "df/dc3/classDirections.html", null ],
@@ -80,8 +84,10 @@ var hierarchy =
     ] ],
     [ "FileUtils", "d5/d4b/classFileUtils.html", null ],
     [ "IBinaryTreeNode", "d7/d98/classIBinaryTreeNode.html", [
-      [ "KDTreeNode", "d8/d94/classKDTreeNode.html", [
-        [ "KDTreeNodeRoot", "d0/d64/classKDTreeNodeRoot.html", null ]
+      [ "LightKDTreeNode", "dd/d79/classLightKDTreeNode.html", [
+        [ "KDTreeNode", "d8/d94/classKDTreeNode.html", [
+          [ "KDTreeNodeRoot", "d0/d64/classKDTreeNodeRoot.html", null ]
+        ] ]
       ] ]
     ] ],
     [ "IntersectionHandlingResult", "d1/dc8/classIntersectionHandlingResult.html", null ],
@@ -97,10 +103,15 @@ var hierarchy =
       [ "BinaryTreeFastBreadthIterator< NodeType >", "d3/d43/classBinaryTreeFastBreadthIterator.html", null ],
       [ "BinaryTreeFastDepthIterator< NodeType >", "dc/da5/classBinaryTreeFastDepthIterator.html", null ]
     ] ],
+    [ "KDTreeBuildType", "d8/d4c/classKDTreeBuildType.html", null ],
     [ "KDTreeFactory", "d5/dd0/classKDTreeFactory.html", [
       [ "SimpleKDTreeFactory", "d6/d96/classSimpleKDTreeFactory.html", [
+        [ "MultiThreadKDTreeFactory", "df/d86/classMultiThreadKDTreeFactory.html", [
+          [ "MultiThreadSAHKDTreeFactory", "dd/d95/classMultiThreadSAHKDTreeFactory.html", null ]
+        ] ],
         [ "SAHKDTreeFactory", "db/d58/classSAHKDTreeFactory.html", [
-          [ "AxisSAHKDTreeFactory", "df/d30/classAxisSAHKDTreeFactory.html", null ]
+          [ "AxisSAHKDTreeFactory", "df/d30/classAxisSAHKDTreeFactory.html", null ],
+          [ "FastSAHKDTreeFactory", "d0/d0e/classFastSAHKDTreeFactory.html", null ]
         ] ]
       ] ]
     ] ],
@@ -139,6 +150,37 @@ var hierarchy =
       [ "RandomNoiseSource< double >", "d4/d38/classRandomNoiseSource.html", [
         [ "UniformNoiseSource< double >", "d3/d57/classUniformNoiseSource.html", null ]
       ] ]
+    ] ],
+    [ "Object", null, [
+      [ "SurfaceInspector::maths::functions::IMathFunction< T, T >", "da/d80/classSurfaceInspector_1_1maths_1_1functions_1_1IMathFunction.html", [
+        [ "SurfaceInspector::maths::functions::GaussianFunction< T >", "db/dc1/classSurfaceInspector_1_1maths_1_1functions_1_1GaussianFunction.html", null ]
+      ] ]
+    ] ],
+    [ "SurfaceInspector::util::Object", "d2/df2/classSurfaceInspector_1_1util_1_1Object.html", [
+      [ "SurfaceInspector::util::draggers::IDragger< E, vector< E > >", "d1/dd1/classSurfaceInspector_1_1util_1_1draggers_1_1IDragger.html", [
+        [ "SurfaceInspector::util::draggers::OptimizationDragger< E >", "d5/d68/classSurfaceInspector_1_1util_1_1draggers_1_1OptimizationDragger.html", [
+          [ "SurfaceInspector::util::draggers::MinDragger< E >", "d6/d26/classSurfaceInspector_1_1util_1_1draggers_1_1MinDragger.html", [
+            [ "SurfaceInspector::util::draggers::MaxDragger< E >", "d8/d3a/classSurfaceInspector_1_1util_1_1draggers_1_1MaxDragger.html", null ]
+          ] ]
+        ] ]
+      ] ],
+      [ "SurfaceInspector::maths::Distances", "dc/d30/classSurfaceInspector_1_1maths_1_1Distances.html", null ],
+      [ "SurfaceInspector::maths::functions::IMathFunction< Tin, Tout >", "da/d80/classSurfaceInspector_1_1maths_1_1functions_1_1IMathFunction.html", null ],
+      [ "SurfaceInspector::maths::Histogram< T >", "da/d52/classSurfaceInspector_1_1maths_1_1Histogram.html", null ],
+      [ "SurfaceInspector::maths::permuters::IPermuter< T >", "d2/daf/classSurfaceInspector_1_1maths_1_1permuters_1_1IPermuter.html", [
+        [ "SurfaceInspector::maths::permuters::CNRIndexPermuter< T >", "dc/d41/classSurfaceInspector_1_1maths_1_1permuters_1_1CNRIndexPermuter.html", null ]
+      ] ],
+      [ "SurfaceInspector::maths::Plane< T >", "d1/d16/classSurfaceInspector_1_1maths_1_1Plane.html", [
+        [ "SurfaceInspector::maths::DetailedPlane< T >", "d4/dfa/classSurfaceInspector_1_1maths_1_1DetailedPlane.html", null ]
+      ] ],
+      [ "SurfaceInspector::maths::PlaneFitter", "df/d21/classSurfaceInspector_1_1maths_1_1PlaneFitter.html", null ],
+      [ "SurfaceInspector::maths::Scalar< T >", "d6/d68/classSurfaceInspector_1_1maths_1_1Scalar.html", null ],
+      [ "SurfaceInspector::maths::SingularContextComputer< T >", "da/d69/classSurfaceInspector_1_1maths_1_1SingularContextComputer.html", null ],
+      [ "SurfaceInspector::maths::SingularContextDescriptors< T >", "d1/db0/classSurfaceInspector_1_1maths_1_1SingularContextDescriptors.html", null ],
+      [ "SurfaceInspector::maths::Statistics", "da/d24/classSurfaceInspector_1_1maths_1_1Statistics.html", null ],
+      [ "SurfaceInspector::maths::Vector< T >", "d1/dd3/classSurfaceInspector_1_1maths_1_1Vector.html", null ],
+      [ "SurfaceInspector::util::draggers::IDragger< E, C >", "d1/dd1/classSurfaceInspector_1_1util_1_1draggers_1_1IDragger.html", null ],
+      [ "SurfaceInspector::util::SurfaceInspectorException", "df/da8/classSurfaceInspector_1_1util_1_1SurfaceInspectorException.html", null ]
     ] ],
     [ "PlaneFitter", "d6/d51/classPlaneFitter.html", null ],
     [ "Primitive", "df/de1/classPrimitive.html", [
@@ -216,7 +258,17 @@ var hierarchy =
     ] ],
     [ "SyncFileWriterFactory", "da/df6/classSyncFileWriterFactory.html", null ],
     [ "Test", "df/da6/classTest.html", null ],
-    [ "thread_pool", "d3/dce/classthread__pool.html", null ],
+    [ "ThreadPool< TaskArgs >", "dc/de7/classThreadPool.html", null ],
+    [ "ThreadPool< TaskArgs ... >", "dc/de7/classThreadPool.html", [
+      [ "MDThreadPool< MDType, TaskArgs >", "d0/d21/classMDThreadPool.html", null ],
+      [ "MDThreadPool< KDTreeBuildType, KDTreeNode *, bool const, vector< Primitive *> &, int const >", "d0/d21/classMDThreadPool.html", [
+        [ "KDTreeFactoryThreadPool", "d2/dea/classKDTreeFactoryThreadPool.html", null ]
+      ] ],
+      [ "ResThreadPool< TaskArgs >", "d2/dee/classResThreadPool.html", null ],
+      [ "ResThreadPool< std::vector< std::vector< double > > &, RandomnessGenerator< double > &, RandomnessGenerator< double > &, NoiseSource< double > & >", "d2/dee/classResThreadPool.html", [
+        [ "PulseThreadPool", "d6/ddc/classPulseThreadPool.html", null ]
+      ] ]
+    ] ],
     [ "TimeWatcher", "d7/d7d/classTimeWatcher.html", null ],
     [ "Trajectory", "d2/d43/classTrajectory.html", null ],
     [ "Vectorial", "dc/db6/classVectorial.html", null ],
@@ -254,6 +306,7 @@ var hierarchy =
     [ "XmlSceneLoader", "db/d91/classXmlSceneLoader.html", null ],
     [ "XmlUtils", "de/d52/classXmlUtils.html", null ],
     [ "runtime_error", null, [
-      [ "rigidmotion::RigidMotionException", "dd/db6/classrigidmotion_1_1RigidMotionException.html", null ]
+      [ "rigidmotion::RigidMotionException", "dd/db6/classrigidmotion_1_1RigidMotionException.html", null ],
+      [ "SurfaceInspector::util::SurfaceInspectorException", "df/da8/classSurfaceInspector_1_1util_1_1SurfaceInspectorException.html", null ]
     ] ]
 ];

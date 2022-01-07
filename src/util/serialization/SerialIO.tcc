@@ -7,6 +7,8 @@
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/binary_iarchive.hpp>
 #include <boost/serialization/unordered_map.hpp>
+
+#include <serial.h>
 #include <logging.hpp>
 
 using boost::archive::archive_exception;
@@ -32,6 +34,9 @@ void SerialIO::write(
         compressedOut.push(ofs);
         boost::archive::binary_oarchive oa(compressedOut);
         oa & object;
+    }
+    catch(archive_exception &aex){
+        handleArchiveException("SerialIO::write", aex);
     }
     catch(std::exception& e){
         logging::WARN(e.what());

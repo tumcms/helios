@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['planefitter',['PlaneFitter',['../d6/d51/classPlaneFitter.html',1,'']]],
+  ['plane',['Plane',['../d1/d16/classSurfaceInspector_1_1maths_1_1Plane.html',1,'SurfaceInspector::maths']]],
+  ['planefitter',['PlaneFitter',['../df/d21/classSurfaceInspector_1_1maths_1_1PlaneFitter.html',1,'SurfaceInspector::maths::PlaneFitter'],['../d6/d51/classPlaneFitter.html',1,'PlaneFitter']]],
   ['planefittertest',['PlaneFitterTest',['../d6/dda/classHeliosTests_1_1PlaneFitterTest.html',1,'HeliosTests']]],
   ['platform',['Platform',['../df/d1e/classPlatform.html',1,'']]],
   ['platformphysicstest',['PlatformPhysicsTest',['../d6/d96/classHeliosTests_1_1PlatformPhysicsTest.html',1,'HeliosTests']]],
   ['platformsettings',['PlatformSettings',['../d5/d0c/classPlatformSettings.html',1,'']]],
   ['polygonmirrorbeamdeflector',['PolygonMirrorBeamDeflector',['../db/d7e/classPolygonMirrorBeamDeflector.html',1,'']]],
   ['primitive',['Primitive',['../df/de1/classPrimitive.html',1,'']]],
+  ['pulsethreadpool',['PulseThreadPool',['../d6/ddc/classPulseThreadPool.html',1,'']]],
   ['pyaabbwrapper',['PyAABBWrapper',['../de/df3/classpyhelios_1_1PyAABBWrapper.html',1,'pyhelios']]],
   ['pybeamdeflectorwrapper',['PyBeamDeflectorWrapper',['../d0/d0e/classpyhelios_1_1PyBeamDeflectorWrapper.html',1,'pyhelios']]],
   ['pydetailedvoxelwrapper',['PyDetailedVoxelWrapper',['../d7/d21/classpyhelios_1_1PyDetailedVoxelWrapper.html',1,'pyhelios']]],

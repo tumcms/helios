@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include <boost/asio/thread_pool.hpp>
 #include <boost/asio/post.hpp>
 
@@ -59,7 +60,7 @@ public:
 	 * @see AbstractDetector::simulatePulse
 	 */
 	void simulatePulse(
-	    thread_pool & pool,
+	    PulseThreadPool & pool,
 	    glm::dvec3 absoluteBeamOrigin,
 	    Rotation absoluteBeamAttitude,
 	    int state_currentPulseNumber,

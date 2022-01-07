@@ -63,6 +63,38 @@ var annotated_dup =
       [ "RigidMotionR2Factory", "d7/da7/classrigidmotion_1_1RigidMotionR2Factory.html", "d7/da7/classrigidmotion_1_1RigidMotionR2Factory" ],
       [ "RigidMotionR3Factory", "dc/df6/classrigidmotion_1_1RigidMotionR3Factory.html", "dc/df6/classrigidmotion_1_1RigidMotionR3Factory" ]
     ] ],
+    [ "SurfaceInspector", null, [
+      [ "maths", null, [
+        [ "functions", null, [
+          [ "GaussianFunction", "db/dc1/classSurfaceInspector_1_1maths_1_1functions_1_1GaussianFunction.html", "db/dc1/classSurfaceInspector_1_1maths_1_1functions_1_1GaussianFunction" ],
+          [ "IMathFunction", "da/d80/classSurfaceInspector_1_1maths_1_1functions_1_1IMathFunction.html", "da/d80/classSurfaceInspector_1_1maths_1_1functions_1_1IMathFunction" ]
+        ] ],
+        [ "permuters", null, [
+          [ "CNRIndexPermuter", "dc/d41/classSurfaceInspector_1_1maths_1_1permuters_1_1CNRIndexPermuter.html", "dc/d41/classSurfaceInspector_1_1maths_1_1permuters_1_1CNRIndexPermuter" ],
+          [ "IPermuter", "d2/daf/classSurfaceInspector_1_1maths_1_1permuters_1_1IPermuter.html", "d2/daf/classSurfaceInspector_1_1maths_1_1permuters_1_1IPermuter" ]
+        ] ],
+        [ "DetailedPlane", "d4/dfa/classSurfaceInspector_1_1maths_1_1DetailedPlane.html", "d4/dfa/classSurfaceInspector_1_1maths_1_1DetailedPlane" ],
+        [ "Distances", "dc/d30/classSurfaceInspector_1_1maths_1_1Distances.html", "dc/d30/classSurfaceInspector_1_1maths_1_1Distances" ],
+        [ "Histogram", "da/d52/classSurfaceInspector_1_1maths_1_1Histogram.html", "da/d52/classSurfaceInspector_1_1maths_1_1Histogram" ],
+        [ "Plane", "d1/d16/classSurfaceInspector_1_1maths_1_1Plane.html", "d1/d16/classSurfaceInspector_1_1maths_1_1Plane" ],
+        [ "PlaneFitter", "df/d21/classSurfaceInspector_1_1maths_1_1PlaneFitter.html", "df/d21/classSurfaceInspector_1_1maths_1_1PlaneFitter" ],
+        [ "Scalar", "d6/d68/classSurfaceInspector_1_1maths_1_1Scalar.html", "d6/d68/classSurfaceInspector_1_1maths_1_1Scalar" ],
+        [ "SingularContextComputer", "da/d69/classSurfaceInspector_1_1maths_1_1SingularContextComputer.html", "da/d69/classSurfaceInspector_1_1maths_1_1SingularContextComputer" ],
+        [ "SingularContextDescriptors", "d1/db0/classSurfaceInspector_1_1maths_1_1SingularContextDescriptors.html", "d1/db0/classSurfaceInspector_1_1maths_1_1SingularContextDescriptors" ],
+        [ "Statistics", "da/d24/classSurfaceInspector_1_1maths_1_1Statistics.html", "da/d24/classSurfaceInspector_1_1maths_1_1Statistics" ],
+        [ "Vector", "d1/dd3/classSurfaceInspector_1_1maths_1_1Vector.html", "d1/dd3/classSurfaceInspector_1_1maths_1_1Vector" ]
+      ] ],
+      [ "util", null, [
+        [ "draggers", null, [
+          [ "IDragger", "d1/dd1/classSurfaceInspector_1_1util_1_1draggers_1_1IDragger.html", "d1/dd1/classSurfaceInspector_1_1util_1_1draggers_1_1IDragger" ],
+          [ "MaxDragger", "d8/d3a/classSurfaceInspector_1_1util_1_1draggers_1_1MaxDragger.html", "d8/d3a/classSurfaceInspector_1_1util_1_1draggers_1_1MaxDragger" ],
+          [ "MinDragger", "d6/d26/classSurfaceInspector_1_1util_1_1draggers_1_1MinDragger.html", "d6/d26/classSurfaceInspector_1_1util_1_1draggers_1_1MinDragger" ],
+          [ "OptimizationDragger", "d5/d68/classSurfaceInspector_1_1util_1_1draggers_1_1OptimizationDragger.html", "d5/d68/classSurfaceInspector_1_1util_1_1draggers_1_1OptimizationDragger" ]
+        ] ],
+        [ "Object", "d2/df2/classSurfaceInspector_1_1util_1_1Object.html", null ],
+        [ "SurfaceInspectorException", "df/da8/classSurfaceInspector_1_1util_1_1SurfaceInspectorException.html", "df/da8/classSurfaceInspector_1_1util_1_1SurfaceInspectorException" ]
+      ] ]
+    ] ],
     [ "visualhelios", null, [
       [ "VHCanvas", "de/dda/classvisualhelios_1_1VHCanvas.html", "de/dda/classvisualhelios_1_1VHCanvas" ],
       [ "VHDynCanvas", "da/d27/classvisualhelios_1_1VHDynCanvas.html", "da/d27/classvisualhelios_1_1VHDynCanvas" ],
@@ -89,6 +121,7 @@ var annotated_dup =
     [ "BinaryTreeDepthIterator", "d4/d02/classBinaryTreeDepthIterator.html", "d4/d02/classBinaryTreeDepthIterator" ],
     [ "BinaryTreeFastBreadthIterator", "d3/d43/classBinaryTreeFastBreadthIterator.html", "d3/d43/classBinaryTreeFastBreadthIterator" ],
     [ "BinaryTreeFastDepthIterator", "dc/da5/classBinaryTreeFastDepthIterator.html", "dc/da5/classBinaryTreeFastDepthIterator" ],
+    [ "BlockAllocator", "d9/d47/classBlockAllocator.html", "d9/d47/classBlockAllocator" ],
     [ "Color4f", "db/d02/classColor4f.html", "db/d02/classColor4f" ],
     [ "ConicBeamDeflector", "d7/db4/classConicBeamDeflector.html", "d7/db4/classConicBeamDeflector" ],
     [ "DetailedVoxel", "d7/d5a/classDetailedVoxel.html", "d7/d5a/classDetailedVoxel" ],
@@ -103,6 +136,7 @@ var annotated_dup =
     [ "DynSequencer", "db/d6f/classDynSequencer.html", "db/d6f/classDynSequencer" ],
     [ "DynSequentiableMovingObject", "d4/d48/classDynSequentiableMovingObject.html", "d4/d48/classDynSequentiableMovingObject" ],
     [ "enum_hasher", "da/ded/structenum__hasher.html", "da/ded/structenum__hasher" ],
+    [ "FastSAHKDTreeFactory", "d0/d0e/classFastSAHKDTreeFactory.html", "d0/d0e/classFastSAHKDTreeFactory" ],
     [ "FiberArrayBeamDeflector", "d7/d20/classFiberArrayBeamDeflector.html", "d7/d20/classFiberArrayBeamDeflector" ],
     [ "file_logger", "d8/d63/classfile__logger.html", "d8/d63/classfile__logger" ],
     [ "FileUtils", "d5/d4b/classFileUtils.html", "d5/d4b/classFileUtils" ],
@@ -118,7 +152,9 @@ var annotated_dup =
     [ "IntersectionHandlingResult", "d1/dc8/classIntersectionHandlingResult.html", "d1/dc8/classIntersectionHandlingResult" ],
     [ "IterableTreeNode", "de/d22/classIterableTreeNode.html", "de/d22/classIterableTreeNode" ],
     [ "ITreeIterator", "df/d39/classITreeIterator.html", "df/d39/classITreeIterator" ],
+    [ "KDTreeBuildType", "d8/d4c/classKDTreeBuildType.html", "d8/d4c/classKDTreeBuildType" ],
     [ "KDTreeFactory", "d5/dd0/classKDTreeFactory.html", "d5/dd0/classKDTreeFactory" ],
+    [ "KDTreeFactoryThreadPool", "d2/dea/classKDTreeFactoryThreadPool.html", "d2/dea/classKDTreeFactoryThreadPool" ],
     [ "KDTreeNode", "d8/d94/classKDTreeNode.html", "d8/d94/classKDTreeNode" ],
     [ "KDTreeNodeRoot", "d0/d64/classKDTreeNodeRoot.html", "d0/d64/classKDTreeNodeRoot" ],
     [ "KDTreePrimitiveComparator", "d6/d1f/structKDTreePrimitiveComparator.html", "d6/d1f/structKDTreePrimitiveComparator" ],
@@ -130,6 +166,8 @@ var annotated_dup =
     [ "LasSyncFileWriter", "d2/db3/classLasSyncFileWriter.html", "d2/db3/classLasSyncFileWriter" ],
     [ "Leg", "de/d51/classLeg.html", "de/d51/classLeg" ],
     [ "LidarSim", "d3/d40/classLidarSim.html", "d3/d40/classLidarSim" ],
+    [ "LightKDTreeNode", "dd/d79/classLightKDTreeNode.html", "dd/d79/classLightKDTreeNode" ],
+    [ "LightKDTreeNodeBlockAllocator", "dd/d04/classLightKDTreeNodeBlockAllocator.html", "dd/d04/classLightKDTreeNodeBlockAllocator" ],
     [ "LinearPathPlatform", "d8/d15/classLinearPathPlatform.html", "d8/d15/classLinearPathPlatform" ],
     [ "logger", "dc/d37/classlogger.html", "dc/d37/classlogger" ],
     [ "logger_factory", "d7/deb/classlogger__factory.html", "d7/deb/classlogger__factory" ],
@@ -137,9 +175,12 @@ var annotated_dup =
     [ "Material", "d3/d89/classMaterial.html", "d3/d89/classMaterial" ],
     [ "MaterialsFileReader", "d3/d74/classMaterialsFileReader.html", "d3/d74/classMaterialsFileReader" ],
     [ "MathConverter", "df/d22/classMathConverter.html", "df/d22/classMathConverter" ],
+    [ "MDThreadPool", "d0/d21/classMDThreadPool.html", "d0/d21/classMDThreadPool" ],
     [ "Measurement", "db/d2e/classMeasurement.html", "db/d2e/classMeasurement" ],
     [ "MeasurementsBuffer", "d3/dec/classMeasurementsBuffer.html", "d3/dec/classMeasurementsBuffer" ],
     [ "MovingPlatform", "d1/d83/classMovingPlatform.html", "d1/d83/classMovingPlatform" ],
+    [ "MultiThreadKDTreeFactory", "df/d86/classMultiThreadKDTreeFactory.html", "df/d86/classMultiThreadKDTreeFactory" ],
+    [ "MultiThreadSAHKDTreeFactory", "dd/d95/classMultiThreadSAHKDTreeFactory.html", "dd/d95/classMultiThreadSAHKDTreeFactory" ],
     [ "NoiseSource", "d9/d6b/classNoiseSource.html", "d9/d6b/classNoiseSource" ],
     [ "NormalNoiseSource", "d9/d8f/classNormalNoiseSource.html", "d9/d8f/classNormalNoiseSource" ],
     [ "OscillatingMirrorBeamDeflector", "d4/dfd/classOscillatingMirrorBeamDeflector.html", "d4/dfd/classOscillatingMirrorBeamDeflector" ],
@@ -148,10 +189,12 @@ var annotated_dup =
     [ "PlatformSettings", "d5/d0c/classPlatformSettings.html", "d5/d0c/classPlatformSettings" ],
     [ "PolygonMirrorBeamDeflector", "db/d7e/classPolygonMirrorBeamDeflector.html", "db/d7e/classPolygonMirrorBeamDeflector" ],
     [ "Primitive", "df/de1/classPrimitive.html", "df/de1/classPrimitive" ],
+    [ "PulseThreadPool", "d6/ddc/classPulseThreadPool.html", "d6/ddc/classPulseThreadPool" ],
     [ "RandomnessGenerator", "dc/d6e/classRandomnessGenerator.html", "dc/d6e/classRandomnessGenerator" ],
     [ "RandomNoiseSource", "d4/d38/classRandomNoiseSource.html", "d4/d38/classRandomNoiseSource" ],
     [ "RaySceneIntersection", "dc/da3/classRaySceneIntersection.html", "dc/da3/classRaySceneIntersection" ],
     [ "RayUtils", "d7/dee/classRayUtils.html", "d7/dee/classRayUtils" ],
+    [ "ResThreadPool", "d2/dee/classResThreadPool.html", "d2/dee/classResThreadPool" ],
     [ "RisleyBeamDeflector", "d4/d57/classRisleyBeamDeflector.html", "d4/d57/classRisleyBeamDeflector" ],
     [ "RotateFilter", "de/de4/classRotateFilter.html", "de/de4/classRotateFilter" ],
     [ "Rotation", "d5/dcb/classRotation.html", "d5/dcb/classRotation" ],
@@ -180,7 +223,7 @@ var annotated_dup =
     [ "SyncFileWriter", "d1/d0e/classSyncFileWriter.html", "d1/d0e/classSyncFileWriter" ],
     [ "SyncFileWriterFactory", "da/df6/classSyncFileWriterFactory.html", "da/df6/classSyncFileWriterFactory" ],
     [ "Test", "df/da6/classTest.html", "df/da6/classTest" ],
-    [ "thread_pool", "d3/dce/classthread__pool.html", "d3/dce/classthread__pool" ],
+    [ "ThreadPool", "dc/de7/classThreadPool.html", "dc/de7/classThreadPool" ],
     [ "TimeWatcher", "d7/d7d/classTimeWatcher.html", "d7/d7d/classTimeWatcher" ],
     [ "Trajectory", "d2/d43/classTrajectory.html", "d2/d43/classTrajectory" ],
     [ "TranslateFilter", "df/d5a/classTranslateFilter.html", "df/d5a/classTranslateFilter" ],

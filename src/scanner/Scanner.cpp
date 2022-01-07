@@ -183,7 +183,11 @@ string Scanner::toString() {
             "Visibility: " + to_string(cfg_device_visibility_km) + " km";
 }
 
-void Scanner::doSimStep(thread_pool& pool, unsigned int const legIndex, double currentGpsTime) {
+void Scanner::doSimStep(
+    PulseThreadPool& pool,
+    unsigned int const legIndex,
+    double currentGpsTime
+) {
     // Update head attitude (we do this even when the scanner is inactive):
     scannerHead->doSimStep(cfg_setting_pulseFreq_Hz);
 
@@ -393,7 +397,7 @@ Rotation Scanner::calcAbsoluteBeamAttitude(){
 
 
 void Scanner::handlePulseComputation(
-    thread_pool& pool,
+    PulseThreadPool& pool,
     unsigned int const legIndex,
     glm::dvec3 &absoluteBeamOrigin,
     Rotation &absoluteBeamAttitude,
@@ -401,7 +405,7 @@ void Scanner::handlePulseComputation(
 ){
     if(pool.getPoolSize() > 1 ) {
         // Submit pulse computation functor to thread pool
-        pool.run_task(FullWaveformPulseRunnable{
+        pool.run_res_task(FullWaveformPulseRunnable{
             dynamic_pointer_cast<FullWaveformPulseDetector>(detector),
             absoluteBeamOrigin,
             absoluteBeamAttitude,

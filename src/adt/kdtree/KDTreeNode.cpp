@@ -10,20 +10,14 @@ using namespace std;
 
 // ***  CONSTRUCTION / DESTRUCTION  *** //
 // ************************************ //
-KDTreeNode::KDTreeNode(KDTreeNode const &kdtn){
-    left = new KDTreeNode(*kdtn.left);
-    right = new KDTreeNode(*kdtn.right);
-    splitPos = kdtn.splitPos;
-    splitAxis = kdtn.splitAxis;
-    primitives = kdtn.primitives;
+KDTreeNode::KDTreeNode(KDTreeNode const &kdtn) : LightKDTreeNode(kdtn) {
+    bound = kdtn.bound;
+    surfaceArea = kdtn.surfaceArea;
 }
 
-KDTreeNode::KDTreeNode(KDTreeNode &&kdtn){
-    left = kdtn.left;
-    right = kdtn.right;
-    splitPos = kdtn.splitPos;
-    splitAxis = kdtn.splitAxis;
-    primitives = kdtn.primitives;
+KDTreeNode::KDTreeNode(KDTreeNode &&kdtn) : LightKDTreeNode(kdtn){
+    bound = kdtn.bound;
+    surfaceArea = kdtn.surfaceArea;
 }
 
 // ***  ASSIGNMENT OPERATORS  *** //
@@ -43,11 +37,9 @@ KDTreeNode& KDTreeNode::operator=(KDTreeNode &&kdtn){
 // ***   S W A P   *** //
 // ******************* //
 void KDTreeNode::swap(KDTreeNode &kdtn){
-    std::swap(left, kdtn.left);
-    std::swap(right, kdtn.right);
-    std::swap(splitPos, kdtn.splitPos);
-    std::swap(splitAxis, kdtn.splitAxis);
-    std::swap(primitives, kdtn.primitives);
+    LightKDTreeNode::swap(kdtn);
+    std::swap(bound, kdtn.bound);
+    std::swap(surfaceArea, kdtn.surfaceArea);
 }
 
 // ***  OBJECT METHODS  *** //

@@ -10,6 +10,7 @@ using std::vector;
  * @see KDTreeNode
  */
 class KDTreeNodeRoot : public KDTreeNode {
+private:
     // ***  SERIALIZATION  *** //
     // *********************** //
     friend class boost::serialization::access;
@@ -59,6 +60,19 @@ public:
      *  computing any cost
      */
     double stats_totalCost;
+    /**
+     * @brief Vector of pointers to the start of each allocated block of
+     *  LightKDTreeNode. If it is empty, it means the tree has not been
+     *  lightened, thus its allocation is not block based.a
+     * @see KDTreeNodeRoot::blocksSize
+     */
+    vector<LightKDTreeNode *> blocks;
+    /**
+     * @brief The size (number of nodes) for each allocated block, if any
+     * @see KDTreeNodeRoot::blocks
+     */
+    vector<size_t> blocksSize;
+
 
     // ***  CONSTRUCTION / DESTRUCTION  *** //
     // ************************************ //
@@ -68,7 +82,32 @@ public:
     KDTreeNodeRoot() :
         stats_maxNumPrimsInLeaf(0),
         stats_minNumPrimsInLeaf(std::numeric_limits<int>::max()),
-        stats_maxDepthReached(0) {}
+        stats_maxDepthReached(0),
+        stats_numInterior(0),
+        stats_numLeaves(0),
+        stats_totalCost(0.0)
+    {}
 
-    ~KDTreeNodeRoot() override = default;
+    ~KDTreeNodeRoot() override{
+        // Handle release when nodes have been allocated in blocks
+        if(!blocks.empty()){
+            // Root direct children to nullptr to prevent double free
+            left = nullptr;
+            right = nullptr;
+
+            // Free each allocated block
+            size_t const numBlocks = blocks.size();
+            for(size_t i = 0 ; i < numBlocks ; ++i){
+                size_t const numNodes = blocksSize[i];
+                LightKDTreeNode *baseBlock = blocks[i];
+                // All children to nullptr to prevent double free
+                for(size_t j = 0 ; j < numNodes ; ++j){
+                    LightKDTreeNode *block = baseBlock + j;
+                    block->left = nullptr;
+                    block->right = nullptr;
+                }
+                delete[] baseBlock;
+            }
+        }
+    }
 };
